@@ -1,0 +1,311 @@
+/* ─── Calculator Layout ─── */
+.calculator {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  padding: 30px 20px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #fff;
+  border-radius: 0 0 24px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  font-size: 1.6em;
+  margin-bottom: 4px;
+}
+
+.sub {
+  opacity: 0.75;
+  font-size: 0.9em;
+}
+
+/* ─── Card ─── */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0d5c7;
+}
+
+.card h2 {
+  font-size: 1.2em;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #8b4513;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ─── Form ─── */
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-size: 0.85em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.formGroup input,
+.formGroup select {
+  padding: 10px 12px;
+  border: 1.5px solid #e0d5c7;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: inherit;
+  background: #fafaf8;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #2c7a7b;
+  box-shadow: 0 0 0 3px rgba(44, 122, 123, 0.1);
+}
+
+.hint {
+  font-size: 0.75em;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ─── Info Icon Tooltip ─── */
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2c7a7b;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: help;
+  flex-shrink: 0;
+  position: relative;
+  line-height: 1;
+}
+
+.infoIcon::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a1a2e;
+  color: #fff;
+  font-size: 0.78em;
+  font-weight: 400;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+
+.infoIcon:hover::after {
+  opacity: 1;
+}
+
+/* ─── Summary Grid ─── */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.summaryItem {
+  background: linear-gradient(135deg, #f8f5f0, #fdfbf8);
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid #e0d5c7;
+  text-align: center;
+}
+
+.sLabel {
+  font-size: 0.82em;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.sValue {
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #8b4513;
+}
+
+.sValue.accent2 {
+  color: #2c7a7b;
+}
+
+.sValue.danger {
+  color: #c0392b;
+}
+
+/* ─── Result Table ─── */
+.resultTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93em;
+}
+
+.resultTable th {
+  background: #f8f5f0;
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 600;
+  border-bottom: 2px solid #8b4513;
+}
+
+.resultTable td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0d5c7;
+}
+
+.resultTable tr:hover td {
+  background: #fdfaf5;
+}
+
+.num {
+  text-align: right !important;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.totalRow td {
+  font-weight: 700;
+  border-top: 2px solid #8b4513;
+  font-size: 1.05em;
+}
+
+.formulaCol {
+  font-size: 0.85em;
+  color: #888;
+}
+
+.noteCol {
+  font-size: 0.82em;
+}
+
+/* ─── Loan Summary ─── */
+.loanSummary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.loanItem {
+  text-align: center;
+  padding: 12px;
+  background: #fdfaf5;
+  border-radius: 10px;
+  border: 1px solid #e0d5c7;
+}
+
+.loanVal {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #2c7a7b;
+}
+
+.loanLbl {
+  font-size: 0.78em;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ─── Accordion ─── */
+.accordion {
+  margin-top: 12px;
+}
+
+.accordionToggle {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  background: #f8f5f0;
+  border: 1px solid #e0d5c7;
+  border-radius: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inherit;
+}
+
+.accordionToggle:hover {
+  background: #f0ece5;
+}
+
+.accordionContent {
+  display: none;
+  padding: 14px;
+  font-size: 0.85em;
+  color: #888;
+  line-height: 1.7;
+}
+
+.accordionContent.open {
+  display: block;
+}
+
+/* ─── Tags ─── */
+.warn {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.okTag {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+  .calculator {
+    padding: 0;
+  }
+  .card {
+    padding: 16px;
+  }
+  .resultTable {
+    font-size: 0.8em;
+  }
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .summaryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .loanSummary {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,7 @@
+# Cloudflare Pages config
+name = "my-website"
+compatibility_date = "2025-06-15"
+
+# 静态站点 → 指向 Next.js export 输出目录
+[site]
+bucket = "./out"
