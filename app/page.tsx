@@ -80,12 +80,7 @@ export default function Home() {
           {t.home.articles.desc}
         </p>
       )}
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-        gap: 16,
-        marginBottom: 40,
-      }}>
+      <div className="article-grid">
         {articleKeys.map(key => {
           const a = t.home.articles.items[key]
           return (

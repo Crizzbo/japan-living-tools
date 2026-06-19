@@ -27,6 +27,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* ── 文章样式 ── */
@@ -102,6 +103,14 @@ body {
   margin-bottom: 40px;
 }
 
+@media (max-width: 640px) {
+  .hero-section {
+    padding: 36px 20px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+}
+
 .hero-section::before {
   content: '';
   position: absolute;
@@ -139,6 +148,26 @@ body {
   flex-wrap: wrap;
 }
 
+@media (max-width: 640px) {
+  .hero-content h2 {
+    font-size: 1.45em;
+    margin-bottom: 8px;
+  }
+  .hero-content p {
+    font-size: 0.92em;
+    margin-bottom: 20px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline {
+    text-align: center;
+    width: 100%;
+  }
+}
+
 .btn-primary {
   display: inline-block;
   background: #fff;
@@ -174,6 +203,14 @@ body {
   border-color: #fff;
 }
 
+@media (max-width: 640px) {
+  .btn-primary,
+  .btn-outline {
+    padding: 14px 20px;
+    font-size: 0.95em;
+  }
+}
+
 /* ── Tool Cards (4-grid) ── */
 .tool-grid {
   display: grid;
@@ -186,12 +223,17 @@ body {
   .tool-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 640px) {
-  .tool-grid { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .tool-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
 }
 
 .tool-card {
   text-decoration: none;
+  min-width: 0;
 }
 
 .tool-card-inner {
@@ -201,6 +243,12 @@ body {
   border: 1px solid var(--border);
   transition: box-shadow 0.2s, transform 0.2s;
   height: 100%;
+}
+
+@media (max-width: 600px) {
+  .tool-card-inner {
+    padding: 18px;
+  }
 }
 
 .tool-card:hover .tool-card-inner {
@@ -236,6 +284,15 @@ body {
   display: inline-block;
 }
 
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 1.2em;
+    margin-bottom: 14px;
+    display: block;
+    text-align: center;
+  }
+}
+
 /* ── Tag ── */
 .tag {
   display: inline-block;
@@ -254,6 +311,22 @@ body {
 .tag-orange {
   background: #fef7e0;
   color: #e37400;
+}
+
+/* ── Article Grid (Responsive) ── */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 600px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
 }
 
 /* ── Header Nav ── */
@@ -298,11 +371,19 @@ body {
 }
 
 @media (max-width: 768px) {
-  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 28px 0 16px;
+  }
 }
 
 @media (max-width: 480px) {
-  .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 0 12px;
+  }
 }
 
 .footer-col h4 {
@@ -319,10 +400,17 @@ body {
   font-size: 0.88em;
   margin-bottom: 6px;
   transition: color 0.15s;
+  padding: 2px 0;
 }
 
 .footer-col a:hover {
   color: var(--accent);
+}
+
+.footer-col p {
+  font-size: 0.85em;
+  color: #5f6368;
+  line-height: 1.7;
 }
 
 .footer-bottom {
@@ -331,4 +419,11 @@ body {
   font-size: 0.78em;
   color: var(--muted);
   border-top: 1px solid var(--border);
+}
+
+@media (max-width: 480px) {
+  .footer-bottom {
+    padding: 12px 0;
+    font-size: 0.73em;
+  }
 }
