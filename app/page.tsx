@@ -24,6 +24,21 @@ const articleHrefs: Record<string, string> = {
   visa: '/articles/japan-visa-guide',
 }
 
+const tagClasses: Record<string, string> = {
+  '生活ガイド': 'tag tag-green',
+  '生活指南': 'tag tag-green',
+  'Living': 'tag tag-green',
+  '不動産': 'tag tag-orange',
+  '房产': 'tag tag-orange',
+  'Real Estate': 'tag tag-orange',
+  'キャリア': 'tag tag-purple',
+  '职场': 'tag tag-purple',
+  'Career': 'tag tag-purple',
+  'ビザ': 'tag',
+  '签证': 'tag',
+  'Visa': 'tag',
+}
+
 export default function Home() {
   const { t } = useT()
 
@@ -32,7 +47,17 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="hero-section">
         <div className="hero-content">
-          <span style={{ fontSize: '0.9em', background: 'rgba(255,255,255,0.15)', padding: '4px 16px', borderRadius: 20, marginBottom: 12, display: 'inline-block' }}>
+          <span style={{
+            fontSize: '0.85em',
+            background: 'rgba(255,255,255,0.18)',
+            backdropFilter: 'blur(8px)',
+            padding: '6px 18px',
+            borderRadius: 24,
+            marginBottom: 16,
+            display: 'inline-block',
+            fontWeight: 600,
+            letterSpacing: '0.02em',
+          }}>
             {t.home.hero.badge}
           </span>
           <h2>{t.home.hero.title}</h2>
@@ -51,20 +76,20 @@ export default function Home() {
       {/* ── 核心工具区 (4 Cards) ── */}
       <h2 className="section-title">{t.home.tools.title}</h2>
       {t.home.tools.desc && (
-        <p style={{ textAlign: 'center', color: '#5f6368', marginBottom: 20, marginTop: -12 }}>
+        <p style={{ color: '#5f6368', marginBottom: 24, marginTop: -8, fontSize: '0.95em', fontWeight: 500 }}>
           {t.home.tools.desc}
         </p>
       )}
       <div className="tool-grid">
-        {toolKeys.map(key => {
+        {toolKeys.map((key, i) => {
           const card = t.home.tools.cards[key]
           return (
-            <Link key={key} href={toolHrefs[key]} className="tool-card">
+            <Link key={key} href={toolHrefs[key]} className={`tool-card animate-in-${i + 1}`}>
               <div className="tool-card-inner">
                 <div className="tool-card-icon">{toolIcons[key]}</div>
                 <h3>{card.title}</h3>
                 <p>{card.desc}</p>
-                <span style={{ color: '#1a73e8', fontWeight: 600, fontSize: '0.9em', marginTop: 8, display: 'inline-block' }}>
+                <span style={{ color: '#1a73e8', fontWeight: 700, fontSize: '0.88em', marginTop: 10, display: 'inline-block' }}>
                   {card.cta}
                 </span>
               </div>
@@ -74,25 +99,26 @@ export default function Home() {
       </div>
 
       {/* ── 最新文章 ── */}
-      <h2 className="section-title" style={{ marginTop: 24 }}>{t.home.articles.title}</h2>
+      <h2 className="section-title" style={{ marginTop: 8 }}>{t.home.articles.title}</h2>
       {t.home.articles.desc && (
-        <p style={{ textAlign: 'center', color: '#5f6368', marginBottom: 20, marginTop: -12 }}>
+        <p style={{ color: '#5f6368', marginBottom: 24, marginTop: -8, fontSize: '0.95em', fontWeight: 500 }}>
           {t.home.articles.desc}
         </p>
       )}
       <div className="article-grid">
         {articleKeys.map(key => {
           const a = t.home.articles.items[key]
+          const tagClass = tagClasses[a.tag] || 'tag'
           return (
-            <Link key={key} href={articleHrefs[key]} style={{ textDecoration: 'none' }}>
-              <div className="tool-card-inner" style={{ padding: 20 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                  <span className="tag">{a.tag}</span>
-                  <span style={{ fontSize: '0.78em', color: '#9aa0a6' }}>{a.date}</span>
+            <Link key={key} href={articleHrefs[key]} className="article-card">
+              <div className="article-card-inner">
+                <div className="article-card-meta">
+                  <span className={tagClass}>{a.tag}</span>
+                  <span className="article-card-date">{a.date}</span>
                 </div>
-                <h3 style={{ fontSize: '1.05em', color: '#1a1a2e', marginBottom: 6 }}>{a.title}</h3>
-                <p style={{ fontSize: '0.85em', color: '#5f6368', lineHeight: 1.6, marginBottom: 10 }}>{a.desc}</p>
-                <span style={{ color: '#1a73e8', fontWeight: 600, fontSize: '0.88em' }}>
+                <h3 className="article-card-title">{a.title}</h3>
+                <p className="article-card-desc">{a.desc}</p>
+                <span className="article-card-cta">
                   {t.home.articles.readMore}
                 </span>
               </div>

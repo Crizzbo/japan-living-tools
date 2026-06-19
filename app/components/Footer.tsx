@@ -23,23 +23,13 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer style={{
-      background: '#fff',
-      borderTop: '1px solid #dadce0',
-      marginTop: '40px',
-    }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0 24px',
-      }}>
+    <footer className="site-footer">
+      <div className="footer-container">
         <div className="footer-grid">
           {/* 关于 */}
           <div className="footer-col">
             <h4>{t.footer.about.title}</h4>
-            <p style={{ fontSize: '0.85em', color: '#5f6368', lineHeight: 1.7 }}>
-              {t.footer.about.desc}
-            </p>
+            <p>{t.footer.about.desc}</p>
           </div>
 
           {/* 工具 */}
@@ -61,9 +51,7 @@ export default function Footer() {
           {/* 免责 */}
           <div className="footer-col">
             <h4>{t.footer.disclaimer.title}</h4>
-            <p style={{ fontSize: '0.85em', color: '#5f6368', lineHeight: 1.7 }}>
-              {t.footer.disclaimer.desc}
-            </p>
+            <p>{t.footer.disclaimer.desc}</p>
           </div>
         </div>
 
