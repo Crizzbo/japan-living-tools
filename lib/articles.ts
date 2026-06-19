@@ -11,6 +11,142 @@ export interface Article extends ArticleMeta {
 }
 
 const articles: Record<string, Article> = {
+  // ─── 住民税完全指南 ───
+  'japan-residence-tax-guide': {
+    slug: 'japan-residence-tax-guide',
+    title: '住民税とは？計算方法・支払い時期・節税のコツを完全解説【2025年版】',
+    desc: '住民税の仕組み、計算方法（所得割＋均等割）、支払い時期、普通徴収と特別徴収の違い、節税できる控除までをわかりやすく解説。',
+    date: '2025-06-18',
+    tag: '税务',
+    content: `
+<div class="article-cta-box" style="background:linear-gradient(135deg,#e8f0fe,#fff);border:2px solid #1a73e8;border-radius:16px;padding:24px 28px;margin-bottom:28px;text-align:center">
+  <p style="font-size:1.05em;font-weight:700;color:#0d47a1;margin-bottom:8px">💡 自分の手取りを計算してみる</p>
+  <p style="font-size:0.9em;color:#5f6368;margin-bottom:14px">年収を入力すれば、住民税・所得税・社会保険料込みの手取り額を自動計算します。</p>
+  <a href="/tools/salary-calculator" style="display:inline-block;background:#1a73e8;color:#fff;padding:12px 28px;border-radius:10px;text-decoration:none;font-weight:700;font-size:0.95em">💰 税後工資計算器 →</a>
+</div>
+
+<p>日本で働いていると、<strong>毎年6月にやってくる「住民税の通知」</strong>。給与明細に突然現れる大きな控除額に驚いた人も多いはず。この記事では、住民税の仕組みから計算方法、支払い時期、節税テクニックまで、<strong>ゼロからわかるように</strong>解説します。</p>
+
+<h2>住民税とは？一言で言うと</h2>
+<p>住民税は、<strong>その年の1月1日に住んでいる市区町村に納める地方税</strong>です。前年の所得に基づいて計算されるため、<strong>「前年の所得 → 翌年の住民税」</strong>というタイムラグがあります。</p>
+
+<p>住民税は大きく2つの要素で構成されます：</p>
+<ul>
+  <li><strong>所得割</strong>：前年の課税所得に対して約10%</li>
+  <li><strong>均等割</strong>：一律 5,000円（都道府県民税1,000円 + 市区町村民税3,000円 + 森林環境税1,000円 = 2024年度以降）</li>
+</ul>
+
+<h2>住民税の構成を分解</h2>
+
+<h3>① 所得割（課税所得 × 税率）</h3>
+
+<table>
+  <tr><th>税目</th><th>税率</th></tr>
+  <tr><td>都道府県民税</td><td>4%</td></tr>
+  <tr><td>市区町村民税</td><td>6%</td></tr>
+  <tr><td><strong>合計</strong></td><td><strong>10%</strong></td></tr>
+</table>
+
+<p>課税所得の計算式：</p>
+<pre>課税所得 = 給与収入 - 給与所得控除 - 社会保険料控除 - 基礎控除（43万円） - その他各種控除</pre>
+
+<p>※ 令和3年度（2021年）分から基礎控除が33万円→43万円に引き上げられました。</p>
+
+<h3>② 均等割（一律）</h3>
+
+<table>
+  <tr><th>内訳</th><th>年額</th></tr>
+  <tr><td>都道府県民税 均等割</td><td>1,000円</td></tr>
+  <tr><td>市区町村民税 均等割</td><td>3,000円</td></tr>
+  <tr><td>森林環境税（国）※令和6年度～</td><td>1,000円</td></tr>
+  <tr><td><strong>合計</strong></td><td><strong>5,000円</strong></td></tr>
+</table>
+
+<p>均等割は<strong>所得が一定以下（非課税基準以下）の場合は免除</strong>されます。自治体によって基準は若干異なりますが、東京23区の場合：</p>
+<ul>
+  <li>均等割・所得割ともに非課税：前年合計所得が35万円×（本人+扶養親族数）+31万円以下</li>
+</ul>
+
+<h2>住民税の計算フロー（具体例）</h2>
+
+<p>例：年収500万円、35歳、独身、東京都在住、社会保険料73.5万円、扶養0人</p>
+
+<table>
+  <tr><th>計算ステップ</th><th>金額</th></tr>
+  <tr><td>① 給与収入</td><td>5,000,000円</td></tr>
+  <tr><td>② 給与所得控除（▲）</td><td>1,540,000円</td></tr>
+  <tr><td>③ 給与所得（①-②）</td><td>3,460,000円</td></tr>
+  <tr><td>④ 社会保険料控除（▲）</td><td>735,000円</td></tr>
+  <tr><td>⑤ 基礎控除（▲）</td><td>430,000円</td></tr>
+  <tr><td><strong>⑥ 課税所得（③-④-⑤）</strong></td><td><strong>2,295,000円</strong></td></tr>
+  <tr><td>⑦ 所得割 = ⑥ × 10%</td><td>229,500円</td></tr>
+  <tr><td>⑧ 均等割</td><td>5,000円</td></tr>
+  <tr><td><strong>⑨ 住民税年額（⑦+⑧）</strong></td><td><strong>234,500円</strong></td></tr>
+  <tr><td>月額換算（÷12）</td><td>約19,500円</td></tr>
+</table>
+
+<p>つまり年収500万円の場合、<strong>毎月約2万円が住民税として天引き</strong>されることになります。</p>
+
+<div class="article-data" style="background:#f8f9fa;border-radius:12px;padding:20px 24px;margin:20px 0;border-left:4px solid #1a73e8">
+  <p style="font-weight:700;margin-bottom:8px;color:#0d47a1">📊 年収別 住民税目安（独身・扶養0人・東京都在住）</p>
+  <table style="margin:0">
+    <tr><th>年収</th><th>住民税（年額）</th><th>月額</th><th>手取率</th></tr>
+    <tr><td>300万円</td><td>約108,000円</td><td>約9,000円</td><td>約82%</td></tr>
+    <tr><td>400万円</td><td>約166,000円</td><td>約13,800円</td><td>約80%</td></tr>
+    <tr><td>500万円</td><td>約234,500円</td><td>約19,500円</td><td>約78%</td></tr>
+    <tr><td>600万円</td><td>約310,000円</td><td>約25,800円</td><td>約76%</td></tr>
+    <tr><td>800万円</td><td>約480,000円</td><td>約40,000円</td><td>約73%</td></tr>
+    <tr><td>1,000万円</td><td>約660,000円</td><td>約55,000円</td><td>約70%</td></tr>
+  </table>
+  <p style="font-size:0.82em;color:#5f6368;margin-top:8px">※ 概算です。実際の金額は控除の有無や自治体により変動します。</p>
+</div>
+
+<h2>特別徴収 vs 普通徴収 ── 支払い方の違い</h2>
+
+<h3>特別徴収（給与天引き）</h3>
+<p>会社員の大半はこの方式。6月～翌年5月の<strong>12回に分けて毎月の給与から自動天引き</strong>されます。6月に届く「住民税決定通知書」で年額と月額を確認できます。</p>
+<ul>
+  <li>✅ メリット：自分で納付する手間がない</li>
+  <li>⚠️ 注意：6月の給与から突然引かれるので手取りが減る</li>
+  <li>⚠️ 転職時の注意：前職の住民税が普通徴収に切り替わり、自宅に納付書が届く</li>
+</ul>
+
+<h3>普通徴収（自分で納付）</h3>
+<p>自営業者やフリーランス、転職で特別徴収が切れた場合に適用。6月・8月・10月・翌年1月の<strong>年4回</strong>、自宅に届く納付書で支払います。</p>
+
+<h2>住民税が急に増える？「住民税の2年目現象」に注意</h2>
+<p>新卒入社や来日1年目の人は要注意。住民税は<strong>前年の所得に基づく</strong>ため：</p>
+<ul>
+  <li>入社1年目（来日1年目）：前年の日本での所得が少ない（もしくはゼロ）→ 住民税が極めて低い</li>
+  <li>入社2年目（来日2年目）：前年フルで働いた所得に基づく → <strong>住民税が大幅アップ</strong></li>
+</ul>
+<p>例：社会人2年目、年収400万円の場合、住民税が月0→約14,000円にジャンプ。給与明細を見て驚く人が多いのはこのためです。転職時や年末調整のタイミングで住民税額を正しく把握しておくことをおすすめします。</p>
+
+<h2 id="faq">よくある質問（FAQ）</h2>
+
+<h3>Q. 住民税はいつからいつまで？</h3>
+<p>住民税の年度は<strong>6月～翌年5月</strong>です。6月に新しい年度の税額が決定し、給与天引き（特別徴収）の場合は6月分給与から天引きが始まります。</p>
+
+<h3>Q. 転職すると住民税はどうなる？</h3>
+<p>転職先で引き続き特別徴収を希望する場合は、前職の「給与所得者異動届出書」を転職先に提出します。提出しないと普通徴収（自宅に納付書が届く）に切り替わります。</p>
+
+<h3>Q. 住民税が非課税になる条件は？</h3>
+<p>生活保護を受けている人、障害者・未成年者・寡婦・ひとり親で前年所得が135万円以下の人、前年所得が自治体の基準以下の人が対象です。詳しくはお住まいの市区町村のHPで確認してください。</p>
+
+<h3>Q. ふるさと納税で住民税は安くなる？</h3>
+<p>はい。ふるさと納税は<strong>住民税からの控除（実質的に寄附金控除）</strong>として機能します。限度額内であれば2,000円の自己負担で返礼品がもらえる仕組みです。ただし限度額を超えると自己負担が増えるので注意。</p>
+
+<div class="article-cta-box" style="background:linear-gradient(135deg,#e8f0fe,#fff);border:2px solid #1a73e8;border-radius:16px;padding:24px 28px;margin:28px 0;text-align:center">
+  <p style="font-size:1.05em;font-weight:700;color:#0d47a1;margin-bottom:8px">🧮 関連ツールで正確に計算</p>
+  <p style="font-size:0.9em;color:#5f6368;margin-bottom:14px">
+    <a href="/tools/salary-calculator" style="color:#1a73e8;font-weight:600">💰 税後工資計算器</a> — 年収から手取り·住民税·所得税を自動計算<br>
+    <a href="/tools/rent-vs-buy" style="color:#1a73e8;font-weight:600">⚖️ 買房vs租房</a> — 住宅ローン控除も考慮した比較<br>
+    <a href="/tools/hs-point-calculator" style="color:#1a73e8;font-weight:600">📊 高度人材積分</a> — 年収が永住申請にどう影響するか
+  </p>
+</div>
+`,
+  },
+
   'japan-cost-of-living': {
     slug: 'japan-cost-of-living',
     title: '2025年日本物价全解析：从超市到水电煤的真实生活成本',

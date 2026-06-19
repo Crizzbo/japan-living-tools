@@ -85,6 +85,7 @@ const en: LocaleDict = {
         homeBuying: { title: 'Complete Guide to Buying a Home in Japan', desc: 'From property hunting to getting the keys — a full walkthrough of costs, loans, and taxes.', date: '2025-06-12', tag: 'Real Estate' },
         salary: { title: '2025 Japan Salary Guide', desc: 'Average salaries across IT, manufacturing, services and more — gross vs take-home pay.', date: '2025-06-08', tag: 'Career' },
         visa: { title: 'Japan Visa Complete Guide', desc: 'From student to work to permanent residency — all visa types, requirements, and procedures.', date: '2025-06-01', tag: 'Visa' },
+        residenceTax: { title: 'Japan Residence Tax Guide: Calculation, Payment & Savings', desc: 'How residence tax works, income-based + flat-rate portions, payment schedule, special vs ordinary collection, and deductible tax-saving strategies.', date: '2025-06-18', tag: 'Tax' },
       },
     },
   },
