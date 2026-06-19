@@ -1,0 +1,121 @@
+1:"$Sreact.fragment"
+2:I[8550,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+3:I[54,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+4:I[827,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"I18nProvider"]
+5:I[7864,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+6:I[7555,[],""]
+7:I[1295,[],""]
+8:I[1024,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","345","static/chunks/app/not-found-d0c508d9ace4c6ef.js"],"default"]
+9:I[5922,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+b:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[9665,[],"ViewportBoundary"]
+11:I[9665,[],"MetadataBoundary"]
+12:"$Sreact.suspense"
+14:I[8393,[],""]
+:HL["/_next/static/css/5530439ba24c7561.css","style"]
+0:{"P":null,"b":"pspgtziq2JZdU4luITD0m","p":"","c":["","articles","japan-salary-guide"],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","japan-salary-guide","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/5530439ba24c7561.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ja","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L4",null,{"children":[["$","$L5",null,{}],["$","main",null,{"className":"flex-1 max-w-6xl mx-auto w-full px-4 py-6","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L8",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L9",null,{}]]}]}]]}]]}],{"children":["articles",["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","japan-salary-guide","d"],["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lf",null,{"children":"$L10"}],null],["$","$L11",null,{"children":["$","div",null,{"hidden":true,"children":["$","$12",null,{"fallback":null,"children":"$L13"}]}]}]]}],false]],"m":"$undefined","G":["$14",[]],"s":false,"S":true}
+15:I[6874,["874","static/chunks/874-437a265a67d6cfee.js","904","static/chunks/app/articles/%5Bslug%5D/page-ff37a66773574371.js"],""]
+16:T18e5,
+<p>日本工资到底是什么水平？各行业差距有多大？这篇文章基于厚生劳动省<strong>「令和6年賃金構造基本統計調査」</strong>和国税庁<strong>「令和5年分民間給与実態統計調査」</strong>，给你一个全面、可对照的工资地图。</p>
+
+<h2>一、日本平均工资是多少？</h2>
+<p>根据厚生劳动省 2024年数据：</p>
+<ul>
+  <li>全体平均年收：<strong>约458万日元</strong>（月额约38.2万日元）</li>
+  <li>男性平均：约545万日元</li>
+  <li>女性平均：约302万日元</li>
+  <li>正社员平均：约523万日元</li>
+  <li>非正社员平均：约201万日元</li>
+</ul>
+
+<p>但"平均"不是最准确的参照——日本工资的<strong>中位数约374万日元</strong>。50%的上班族年收在374万以下。这说明少数高收入者拉高了平均值。</p>
+
+<h2>二、行业别平均年收</h2>
+<table>
+  <tr><th>行业</th><th>平均年收（万日元）</th><th>备注</th></tr>
+  <tr><td>情报通信业（IT）</td><td>680</td><td>持续高于其他行业，增长稳定</td></tr>
+  <tr><td>金融·保险业</td><td>656</td><td>银行、证券、保险含奖金后实际更高</td></tr>
+  <tr><td>学术研究·专门技术服务业</td><td>610</td><td>包括咨询、法律、会计、研究机构</td></tr>
+  <tr><td>制造业</td><td>510</td><td>含汽车、电子、机械等</td></tr>
+  <tr><td>建设业</td><td>505</td><td>受技能人才短缺影响持续上涨</td></tr>
+  <tr><td>运输·邮政业</td><td>465</td><td>物流需求推动工资上升</td></tr>
+  <tr><td>批发·零售业</td><td>390</td><td>含超市、百货店、电商</td></tr>
+  <tr><td>医疗·福祉</td><td>405</td><td>护士、护理、药剂师等</td></tr>
+  <tr><td>教育·学习支援业</td><td>485</td><td>含大学、补习班、语言学校</td></tr>
+  <tr><td>餐饮·住宿业</td><td>305</td><td>最低工资劳动密集型</td></tr>
+</table>
+
+<h2>三、年龄别年收分布</h2>
+<table>
+  <tr><th>年龄</th><th>平均年收（万日元）</th><th>参考职业</th></tr>
+  <tr><td>20~24岁</td><td>273</td><td>新卒入社第1~3年</td></tr>
+  <tr><td>25~29岁</td><td>378</td><td>3~7年经验，开始独立担当</td></tr>
+  <tr><td>30~34岁</td><td>467</td><td>晋升主任/系长</td></tr>
+  <tr><td>35~39岁</td><td>543</td><td>课长补佐/课长</td></tr>
+  <tr><td>40~44岁</td><td>594</td><td>课长/部长级别</td></tr>
+  <tr><td>45~49岁</td><td>624</td><td>管理职峰值</td></tr>
+  <tr><td>50~54岁</td><td>640</td><td>年收峰值区（奖金最高时期）</td></tr>
+  <tr><td>55~59岁</td><td>605</td><td>再雇用/役职退休后略有下降</td></tr>
+</table>
+
+<h2>四、IT行业工资详解（重点）</h2>
+<p>IT是外国人在日本就职最多的行业之一，也是工资增长最快的行业：</p>
+<ul>
+  <li><strong>SES/派遣</strong>（2~3年经验）：350~500万日元</li>
+  <li><strong>自社开发 中坚</strong>（4~6年经验）：500~700万日元</li>
+  <li><strong>自社开发 资深</strong>（7~10年经验）：700~1,000万日元</li>
+  <li><strong>Tech Lead / 管理职</strong>：900~1,300万日元</li>
+  <li><strong>外资IT（Google、Amazon、Indeed等）</strong>：L4 1,000~1,500万日元，L5 1,500~2,200万日元</li>
+</ul>
+<p>值得注意的是，日企IT的传统年功序列（按年龄涨薪）正在逐步转向<strong>技能·成果导向</strong>，年轻高技能人才的薪资天花板被大幅拉高。</p>
+
+<h2>五、到手金额如何计算？</h2>
+<p>手取（到手金额）≈ 额面年收 - 以下扣除：</p>
+<h3>① 社会保険料（约工资的 14~15%）</h3>
+<ul>
+  <li>健康保险：约 5%（40岁以上含介护保险约5.9%）</li>
+  <li>厚生年金：约 9.15%</li>
+  <li>雇用保险：约 0.6%（一般事业） / 0.4%（建设业 2025年度改定后）</li>
+</ul>
+<h3>② 所得税 + 復興特別所得税</h3>
+<ul>
+  <li>应纳税所得 = 年收 - 给与所得控除 - 社会保险料 - 基础控除（48万） - 其他控除</li>
+  <li>税率：5%（~195万）→ 10%（~330万）→ 20%（~695万）→ 23%（~900万）→ 33%（~1,800万）→ 40%（~4,000万）→ 45%（4,000万以上）</li>
+  <li>复兴特别所得税 = 所得税额 × 2.1%</li>
+</ul>
+<h3>③ 住民税</h3>
+<p>约 10%（都道府县民税4% + 市区町村民税6%）+ 均等割5,000日元。注意：住民税基于<strong>前年</strong>所得，入社第一年免住民税，第二年大幅增加。</p>
+
+<h2>六、实例：年收500万日元的到手金额</h2>
+<p>假设：35岁 / 正社员 / 东京都在住 / 单身 / 抚养0人</p>
+<table>
+  <tr><th>项目</th><th>金额（万日元）</th></tr>
+  <tr><td>额面年收</td><td>500.0</td></tr>
+  <tr><td>给与所得控除（▲）</td><td>154.0</td></tr>
+  <tr><td>社会保险料（▲）</td><td>73.5</td></tr>
+  <tr><td>基础控除（▲）</td><td>48.0</td></tr>
+  <tr><td>课税所得</td><td>224.5</td></tr>
+  <tr><td>所得税+复兴（▲）</td><td>14.8</td></tr>
+  <tr><td>住民税（▲）</td><td>24.0</td></tr>
+  <tr><td><strong>到手金额</strong></td><td><strong>387.7</strong></td></tr>
+  <tr><td>手取率</td><td>约 77.5%</td></tr>
+</table>
+<p>月手取约 32.3万日元。用我们网站的 <a href="/tools/salary-calculator">税后工资计算器</a> 可以输入你的实际年收计算。</p>
+
+<h2>七、奖金（ボーナス）</h2>
+<p>日本企业通常每年发两次奖金（夏·冬各一次）。制造业·金融业·IT行业奖金丰厚（通常2~6个月基本工资），服务业·零售业则较少（0.5~2个月）。转职时一定要确认奖金年额而不是基本月给。</p>
+
+<h2>八、提高收入的几点建议</h2>
+<ol>
+  <li><strong>跳槽（転職）</strong>：日本跳槽市场的工资涨幅通常在10~30%，比内部晋升快得多。3~5年经验是黄金跳槽期。</li>
+  <li><strong>英语 + 日语</strong>：双语人才在日本极稀有。会中文+日语+英语的IT工程师在招聘市场上要价远超只会日语的同行。</li>
+  <li><strong>持有资格</strong>：信息处理技术者、TOEIC/英检、USCPA（美国注册会计师）、PMP等国际资格显著提升议价能力。</li>
+  <li><strong>避开纯日企年功序列</strong>：在日本的外资企业和互联网初创企业通常采用国际标准薪酬体系，与年龄无关。</li>
+</ol>
+a:["$","div",null,{"children":[["$","$L15",null,{"href":"/articles","style":{"display":"inline-block","color":"#1a73e8","textDecoration":"none","fontWeight":600,"fontSize":"0.9em","marginBottom":20},"children":"← 返回文章列表"}],["$","div",null,{"style":{"marginBottom":8},"children":[["$","span",null,{"className":"tag","style":{"marginRight":12},"children":"职场"}],["$","span",null,{"style":{"fontSize":"0.85em","color":"#9aa0a6"},"children":"2025-06-08"}]]}],["$","h1",null,{"style":{"fontSize":"2em","fontWeight":700,"color":"#0d47a1","lineHeight":1.3,"marginBottom":24},"children":"2025年日本工资水平详解：各行各业收入与到手金额"}],["$","div",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$16"}}],"$L17"]}]
+17:["$","div",null,{"style":{"marginTop":40,"paddingTop":20,"borderTop":"1px solid #dadce0","textAlign":"center"},"children":["$","$L15",null,{"href":"/articles","style":{"color":"#1a73e8","textDecoration":"none","fontWeight":600},"children":"← 返回文章列表"}]}]
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+e:{"metadata":[["$","title","0",{"children":"2025年日本工资水平详解：各行各业收入与到手金额 | Japan Living Tools"}],["$","meta","1",{"name":"description","content":"日本各行业的平均工资是多少？工资条上各项扣除是什么？税后实际到手多少？用数据说话。"}],["$","meta","2",{"name":"author","content":"Japan Living Tools"}],["$","meta","3",{"name":"keywords","content":"日本购房,日本买房,购房计算器,高度人材,税后工资,买房租房对比,Next.js"}],["$","meta","4",{"name":"google-site-verification","content":"YOUR_GOOGLE_SITE_VERIFICATION_CODE"}],["$","meta","5",{"property":"og:title","content":"2025年日本工资水平详解：各行各业收入与到手金额 | Japan Living Tools"}],["$","meta","6",{"property":"og:description","content":"日本各行业的平均工资是多少？工资条上各项扣除是什么？税后实际到手多少？用数据说话。"}],["$","meta","7",{"property":"og:site_name","content":"Japan Living Tools"}],["$","meta","8",{"property":"og:locale","content":"ja_JP"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"2025年日本工资水平详解：各行各业收入与到手金额 | Japan Living Tools"}],["$","meta","12",{"name":"twitter:description","content":"日本各行业的平均工资是多少？工资条上各项扣除是什么？税后实际到手多少？用数据说话。"}]],"error":null,"digest":"$undefined"}
+13:"$e:metadata"

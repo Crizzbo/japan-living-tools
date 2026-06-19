@@ -1,0 +1,133 @@
+1:"$Sreact.fragment"
+2:I[8550,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+3:I[54,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+4:I[827,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"I18nProvider"]
+5:I[7864,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+6:I[7555,[],""]
+7:I[1295,[],""]
+8:I[1024,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","345","static/chunks/app/not-found-d0c508d9ace4c6ef.js"],"default"]
+9:I[5922,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+b:I[9665,[],"OutletBoundary"]
+d:I[4911,[],"AsyncMetadataOutlet"]
+f:I[9665,[],"ViewportBoundary"]
+11:I[9665,[],"MetadataBoundary"]
+12:"$Sreact.suspense"
+14:I[8393,[],""]
+:HL["/_next/static/css/5530439ba24c7561.css","style"]
+0:{"P":null,"b":"pspgtziq2JZdU4luITD0m","p":"","c":["","articles","japan-cost-of-living"],"i":false,"f":[[["",{"children":["articles",{"children":[["slug","japan-cost-of-living","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/5530439ba24c7561.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ja","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L4",null,{"children":[["$","$L5",null,{}],["$","main",null,{"className":"flex-1 max-w-6xl mx-auto w-full px-4 py-6","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L8",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L9",null,{}]]}]}]]}]]}],{"children":["articles",["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","japan-cost-of-living","d"],["$","$1","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$La",null,["$","$Lb",null,{"children":["$Lc",["$","$Ld",null,{"promise":"$@e"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lf",null,{"children":"$L10"}],null],["$","$L11",null,{"children":["$","div",null,{"hidden":true,"children":["$","$12",null,{"fallback":null,"children":"$L13"}]}]}]]}],false]],"m":"$undefined","G":["$14",[]],"s":false,"S":true}
+15:I[6874,["874","static/chunks/874-437a265a67d6cfee.js","904","static/chunks/app/articles/%5Bslug%5D/page-ff37a66773574371.js"],""]
+16:T1917,
+<p>很多人来日本之前都会问同一个问题：<strong>"在日本生活，一个月到底要花多少钱？"</strong>答案不是固定的——取决于你住在哪个城市、生活方式如何。但这篇文章会给你一个清晰的参照系。</p>
+
+<h2>一、食品与日用品：超市购物实录</h2>
+
+<p>日本的超市价格因区域和连锁店不同而有较大差异。以下以东京23区中型超市的实际价格为基准（2025年6月数据）：</p>
+
+<h3>基础食材</h3>
+<ul>
+  <li>大米（秋田小町 5kg）：2,200 ~ 2,800 日元</li>
+  <li>切片面包（8片装）：120 ~ 180 日元</li>
+  <li>鸡蛋（10个 L size）：210 ~ 320 日元</li>
+  <li>牛奶（1L）：190 ~ 260 日元</li>
+  <li>鸡胸肉（100g）：80 ~ 110 日元</li>
+  <li>猪五花肉（100g）：180 ~ 250 日元</li>
+  <li>牛肉（やまと豚 100g）：300 ~ 600 日元</li>
+  <li>三文鱼（1切）：250 ~ 400 日元</li>
+  <li>豆腐（300g）：50 ~ 80 日元</li>
+  <li>蔬菜（随季节波动）：卷心菜1个150~300日元，大葱3根150~200日元</li>
+</ul>
+
+<h3>外食价格参考</h3>
+<ul>
+  <li>牛丼（吉野家 并盛）：498 日元</li>
+  <li>拉面（一碗）：850 ~ 1,200 日元</li>
+  <li>定食（一汁三菜）：650 ~ 1,100 日元</li>
+  <li>回转寿司（一碟）：110 ~ 330 日元</li>
+  <li>居酒屋（人均）：3,000 ~ 5,000 日元</li>
+  <li>便利店便当：450 ~ 700 日元</li>
+  <li>星巴克拿铁（Grande）：540 日元</li>
+</ul>
+
+<p>如果每天一顿外食、其余自炊，单人的月食品费约 <strong>30,000 ~ 50,000日元</strong>。全部自炊可控制在 <strong>20,000 ~ 30,000日元</strong>，每天外食则轻松突破 <strong>70,000日元</strong>。</p>
+
+<h2>二、住居费：最大支出项</h2>
+
+<h3>东京圈租赁行情（月额 / 1K ~ 1DK 约25㎡）</h3>
+<ul>
+  <li>山手线内侧（涩谷、新宿、池袋）：90,000 ~ 150,000 日元</li>
+  <li>山手线外侧（世田谷、杉并、板桥）：65,000 ~ 95,000 日元</li>
+  <li>练马、江户川、足立等：55,000 ~ 75,000 日元</li>
+  <li>埼玉、千叶（都心电车通勤30分钟圈）：40,000 ~ 60,000 日元</li>
+</ul>
+
+<h3>其他城市</h3>
+<ul>
+  <li>大阪市中心：55,000 ~ 80,000 日元</li>
+  <li>名古屋市中心：50,000 ~ 70,000 日元</li>
+  <li>福冈市中心：45,000 ~ 65,000 日元</li>
+  <li>札幌市中心：35,000 ~ 55,000 日元</li>
+</ul>
+
+<p>租赁签约时通常还需要 <strong>敷金（押金）1~2个月、礼金（谢礼金）0~2个月、中介费1个月+消费税</strong>，合计约3~5个月房租的初期费用。</p>
+
+<h2>三、水电煤气</h2>
+
+<table>
+  <tr><th>项目</th><th>单人月额（概算）</th><th>二人家庭月额</th></tr>
+  <tr><td>电费</td><td>5,000 ~ 8,000日元</td><td>8,000 ~ 12,000日元</td></tr>
+  <tr><td>煤气费</td><td>2,500 ~ 5,000日元</td><td>4,000 ~ 8,000日元</td></tr>
+  <tr><td>水费（两个月合并）</td><td>每月约 2,000 ~ 3,000日元</td><td>每月约 3,500 ~ 5,000日元</td></tr>
+  <tr><td>网络</td><td>光回线 4,000 ~ 5,500日元</td><td>同左</td></tr>
+  <tr><td>手机</td><td>格安SIM 1,500~3,000日元 / 三大运营商 5,000~8,000日元</td><td>—</td></tr>
+</table>
+
+<p>夏季和冬季的空调使用期，电费会增加到平时的1.5~2倍。</p>
+
+<h2>四、交通费</h2>
+
+<ul>
+  <li>都内电车初乘：130 ~ 200日元（1~3站以内）</li>
+  <li>都内通勤月票（例：中野→新宿 3分钟）：约5,000日元/月</li>
+  <li>郊区通勤月票（例：埼玉川口→东京站 25分钟）：约12,000日元/月</li>
+  <li>自行车停车（都心）：每月 3,000 ~ 10,000日元</li>
+  <li>出租车起步价（东京）：500日元（1.096km内）</li>
+</ul>
+
+<p>很多公司会全额报销通勤月票，这是日本雇佣的优良传统。</p>
+
+<h2>五、国民健康保险与年金</h2>
+<p>公司职员（会社员）加入<strong>社会保险</strong>，个人负担约工资的15%（含健康保险+厚生年金+雇用保险）。非公司职员加入<strong>国民健康保险+国民年金</strong>，约每月 16,610 日元国民年金 + 健康保险费（根据前年收入浮动，最低约2,000日元起）。</p>
+
+<h2>六、样本月度预算（东京生活 单人 / 月）</h2>
+<table>
+  <tr><th>项目</th><th>节俭型</th><th>标准型</th><th>舒适型</th></tr>
+  <tr><td>房租</td><td>60,000</td><td>85,000</td><td>130,000</td></tr>
+  <tr><td>食费</td><td>25,000</td><td>40,000</td><td>70,000</td></tr>
+  <tr><td>水电煤气</td><td>10,000</td><td>13,000</td><td>18,000</td></tr>
+  <tr><td>通信</td><td>5,000</td><td>8,000</td><td>12,000</td></tr>
+  <tr><td>交通（自费部分）</td><td>3,000</td><td>5,000</td><td>15,000</td></tr>
+  <tr><td>日用品·杂费</td><td>5,000</td><td>10,000</td><td>15,000</td></tr>
+  <tr><td>娱乐·交际</td><td>10,000</td><td>25,000</td><td>50,000</td></tr>
+  <tr><td>保险·医疗</td><td>8,000</td><td>12,000</td><td>20,000</td></tr>
+  <tr><td><strong>合计</strong></td><td><strong>126,000</strong></td><td><strong>198,000</strong></td><td><strong>330,000</strong></td></tr>
+</table>
+
+<p><strong>结论</strong>：东京单人月生活成本以15~20万日元为基础线。低于15万需要相当节俭；25万以上可以过得比较舒适；35万以上几乎没啥顾虑。</p>
+
+<h2>七、省生活费的实用技巧</h2>
+<ol>
+  <li><strong>业务超市（業務スーパー）</strong>：冷冻食品、调味料、进口食材价格低至普通超市的一半。推荐品牌：神户物产系列。</li>
+  <li><strong>晚间折扣</strong>：超市打烊前1~2小时，刺身、寿司、便当等会有20%~50%的折扣贴纸。</li>
+  <li><strong>百元店（大创、Seria、CanDo）</strong>：日用品、收纳用品、部分食材（100日元+消费税）。质量和设计感不断提升。</li>
+  <li><strong>二手店（Bookoff、Hardoff、2nd Street）</strong>：家电、家具、书籍、游戏，成色好价格低。</li>
+  <li><strong>煤电自由化</strong>：2016年起可自由选择电力和燃气供应商，比较网站（エネチェンジ等）可省10~20%。</li>
+  <li><strong>定期券（通勤月票）</strong>：如果公司不报销，也可以估算自己的通勤频率决定是否购买。</li>
+</ol>
+
+<p>说到底，日本生活成本虽高但<strong>可管理</strong>。知道钱去哪了，就能做出更好的消费决策。</p>
+a:["$","div",null,{"children":[["$","$L15",null,{"href":"/articles","style":{"display":"inline-block","color":"#1a73e8","textDecoration":"none","fontWeight":600,"fontSize":"0.9em","marginBottom":20},"children":"← 返回文章列表"}],["$","div",null,{"style":{"marginBottom":8},"children":[["$","span",null,{"className":"tag","style":{"marginRight":12},"children":"生活指南"}],["$","span",null,{"style":{"fontSize":"0.85em","color":"#9aa0a6"},"children":"2025-06-15"}]]}],["$","h1",null,{"style":{"fontSize":"2em","fontWeight":700,"color":"#0d47a1","lineHeight":1.3,"marginBottom":24},"children":"2025年日本物价全解析：从超市到水电煤的真实生活成本"}],["$","div",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$16"}}],"$L17"]}]
+17:["$","div",null,{"style":{"marginTop":40,"paddingTop":20,"borderTop":"1px solid #dadce0","textAlign":"center"},"children":["$","$L15",null,{"href":"/articles","style":{"color":"#1a73e8","textDecoration":"none","fontWeight":600},"children":"← 返回文章列表"}]}]
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:null
+e:{"metadata":[["$","title","0",{"children":"2025年日本物价全解析：从超市到水电煤的真实生活成本 | Japan Living Tools"}],["$","meta","1",{"name":"description","content":"在日本生活，一个月到底要花多少钱？超市购物、水电煤气、外出就餐、交通出行——我们逐项拆解。"}],["$","meta","2",{"name":"author","content":"Japan Living Tools"}],["$","meta","3",{"name":"keywords","content":"日本购房,日本买房,购房计算器,高度人材,税后工资,买房租房对比,Next.js"}],["$","meta","4",{"name":"google-site-verification","content":"YOUR_GOOGLE_SITE_VERIFICATION_CODE"}],["$","meta","5",{"property":"og:title","content":"2025年日本物价全解析：从超市到水电煤的真实生活成本 | Japan Living Tools"}],["$","meta","6",{"property":"og:description","content":"在日本生活，一个月到底要花多少钱？超市购物、水电煤气、外出就餐、交通出行——我们逐项拆解。"}],["$","meta","7",{"property":"og:site_name","content":"Japan Living Tools"}],["$","meta","8",{"property":"og:locale","content":"ja_JP"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"2025年日本物价全解析：从超市到水电煤的真实生活成本 | Japan Living Tools"}],["$","meta","12",{"name":"twitter:description","content":"在日本生活，一个月到底要花多少钱？超市购物、水电煤气、外出就餐、交通出行——我们逐项拆解。"}]],"error":null,"digest":"$undefined"}
+13:"$e:metadata"

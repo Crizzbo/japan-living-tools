@@ -1,0 +1,25 @@
+1:"$Sreact.fragment"
+2:I[8550,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+3:I[54,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+4:I[827,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"I18nProvider"]
+5:I[7864,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+6:I[7555,[],""]
+7:I[1295,[],""]
+8:I[1024,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","345","static/chunks/app/not-found-d0c508d9ace4c6ef.js"],"default"]
+9:I[5922,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","177","static/chunks/app/layout-b0dd7c42edf7faee.js"],"default"]
+a:I[894,[],"ClientPageRoot"]
+b:I[1057,["874","static/chunks/874-437a265a67d6cfee.js","827","static/chunks/827-5ea6c1be1bb5c97e.js","974","static/chunks/app/page-3cb1b8a30d7a7aea.js"],"default"]
+e:I[9665,[],"OutletBoundary"]
+10:I[4911,[],"AsyncMetadataOutlet"]
+12:I[9665,[],"ViewportBoundary"]
+14:I[9665,[],"MetadataBoundary"]
+15:"$Sreact.suspense"
+17:I[8393,[],""]
+:HL["/_next/static/css/5530439ba24c7561.css","style"]
+0:{"P":null,"b":"pspgtziq2JZdU4luITD0m","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/5530439ba24c7561.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ja","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","$L2",null,{}],["$","$L3",null,{}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L4",null,{"children":[["$","$L5",null,{}],["$","main",null,{"className":"flex-1 max-w-6xl mx-auto w-full px-4 py-6","children":["$","$L6",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L7",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L8",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L9",null,{}]]}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$La",null,{"Component":"$b","searchParams":{},"params":{},"promises":["$@c","$@d"]}],null,["$","$Le",null,{"children":["$Lf",["$","$L10",null,{"promise":"$@11"}]]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$L12",null,{"children":"$L13"}],null],["$","$L14",null,{"children":["$","div",null,{"hidden":true,"children":["$","$15",null,{"fallback":null,"children":"$L16"}]}]}]]}],false]],"m":"$undefined","G":["$17",[]],"s":false,"S":true}
+c:{}
+d:"$0:f:0:1:2:children:1:props:children:0:props:params"
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:null
+11:{"metadata":[["$","title","0",{"children":"Japan Living Tools — 日本生活实用工具"}],["$","meta","1",{"name":"description","content":"日本购房费用计算器、高度人材积分、税后工资计算、买房vs租房对比。日本生活に役立つ実用的なオンラインツール。"}],["$","meta","2",{"name":"author","content":"Japan Living Tools"}],["$","meta","3",{"name":"keywords","content":"日本购房,日本买房,购房计算器,高度人材,税后工资,买房租房对比,Next.js"}],["$","meta","4",{"name":"google-site-verification","content":"YOUR_GOOGLE_SITE_VERIFICATION_CODE"}],["$","meta","5",{"property":"og:title","content":"Japan Living Tools — 日本生活实用工具"}],["$","meta","6",{"property":"og:description","content":"日本购房费用计算器、高度人材积分、税后工资计算、买房vs租房对比。日本生活に役立つ実用的なオンラインツール。"}],["$","meta","7",{"property":"og:site_name","content":"Japan Living Tools"}],["$","meta","8",{"property":"og:locale","content":"ja_JP"}],["$","meta","9",{"property":"og:type","content":"website"}],["$","meta","10",{"name":"twitter:card","content":"summary"}],["$","meta","11",{"name":"twitter:title","content":"Japan Living Tools — 日本生活实用工具"}],["$","meta","12",{"name":"twitter:description","content":"日本购房费用计算器、高度人材积分、税后工资计算、买房vs租房对比。日本生活に役立つ実用的なオンラインツール。"}]],"error":null,"digest":"$undefined"}
+16:"$11:metadata"
