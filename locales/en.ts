@@ -3,12 +3,14 @@ import type { LocaleDict } from './types'
 const en: LocaleDict = {
   header: {
     logo: '🗾 Japan Living Tools',
+    articles: '📝 Articles',
     nav: {
       home: 'Home',
       houseCalculator: 'Purchase Cost',
       hsPointCalculator: 'HSFP Score',
       salaryCalculator: 'Take-home Pay',
       rentVsBuy: 'Rent vs Buy',
+      articles: 'Articles',
     },
   },
   footer: {
@@ -25,6 +27,15 @@ const en: LocaleDict = {
         rentVsBuy: 'Rent vs Buy',
       },
     },
+    articles: {
+      title: '📝 Articles',
+      nav: {
+        costOfLiving: 'Cost of Living',
+        homeBuying: 'Home Buying Guide',
+        salary: 'Japan Salaries',
+        visa: 'Japan Visas',
+      },
+    },
     disclaimer: {
       title: 'ℹ️ Disclaimer',
       desc: 'Content is for reference only. Actual costs vary by individual circumstances. Calculations do not constitute investment or purchase advice.',
@@ -37,6 +48,7 @@ const en: LocaleDict = {
       title: 'Simplify Your Life in Japan',
       desc: 'Home purchase costs, visa points, tax calculations — all the numbers you need for life in Japan, in one place.',
       cta1: 'Try Tools',
+      cta2: 'Read Articles →',
     },
     tools: {
       title: '🧮 Core Tools',
@@ -64,6 +76,17 @@ const en: LocaleDict = {
         },
       },
     },
+    articles: {
+      title: '📝 Latest Articles',
+      desc: 'Practical guides on living in Japan — from visas to home buying, from salaries to cost of living.',
+      readMore: 'Read More →',
+      items: {
+        costOfLiving: { title: '2025 Japan Cost of Living Guide', desc: 'Groceries, utilities, dining out, transport — how much does a day really cost?', date: '2025-06-15', tag: 'Living' },
+        homeBuying: { title: 'Complete Guide to Buying a Home in Japan', desc: 'From property hunting to getting the keys — a full walkthrough of costs, loans, and taxes.', date: '2025-06-12', tag: 'Real Estate' },
+        salary: { title: '2025 Japan Salary Guide', desc: 'Average salaries across IT, manufacturing, services and more — gross vs take-home pay.', date: '2025-06-08', tag: 'Career' },
+        visa: { title: 'Japan Visa Complete Guide', desc: 'From student to work to permanent residency — all visa types, requirements, and procedures.', date: '2025-06-01', tag: 'Visa' },
+      },
+    },
   },
   common: {
     langSwitch: 'Language',
@@ -77,6 +100,11 @@ const en: LocaleDict = {
     },
     toolsTitle: 'All Tools',
     toolsDesc: 'Online calculators for life in Japan.',
+  },
+  articles: {
+    title: '📝 Articles',
+    desc: 'Practical guides and latest information for life in Japan.',
+    back: '← Back to Articles',
   },
   tools: {
     houseCalculator: { title: 'Home Purchase Cost Calculator', desc: 'Detailed breakdown of all costs when buying a home in Japan.' },

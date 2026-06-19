@@ -5,13 +5,14 @@ import { useState, useRef, useEffect } from 'react'
 import { useT } from '@/lib/i18n'
 import type { Lang } from '@/locales/types'
 
-const navKeys = ['home', 'houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
+const navKeys = ['home', 'houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy', 'articles'] as const
 const navHrefs: Record<string, string> = {
   home: '/',
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
   salaryCalculator: '/tools/salary-calculator',
   rentVsBuy: '/tools/rent-vs-buy',
+  articles: '/articles',
 }
 
 const dropdownItemStyle: React.CSSProperties = {

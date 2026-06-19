@@ -3,12 +3,14 @@ import type { LocaleDict } from './types'
 const ja: LocaleDict = {
   header: {
     logo: '🗾 Japan Living Tools',
+    articles: '📝 お役立ち記事',
     nav: {
       home: 'ホーム',
       houseCalculator: '購入費用',
       hsPointCalculator: '高度人材P',
       salaryCalculator: '手取り計算',
       rentVsBuy: '買うvs借りる',
+      articles: '記事',
     },
   },
   footer: {
@@ -25,6 +27,15 @@ const ja: LocaleDict = {
         rentVsBuy: '購入vs賃貸比較',
       },
     },
+    articles: {
+      title: '📝 お役立ち記事',
+      nav: {
+        costOfLiving: '日本物価',
+        homeBuying: '日本の住宅購入',
+        salary: '日本の給与',
+        visa: '日本ビザ',
+      },
+    },
     disclaimer: {
       title: 'ℹ️ 免責事項',
       desc: '本サイトの内容は参考情報です。実際の費用は個人の条件により異なります。計算結果はいかなる投資・購入の助言にもなりません。',
@@ -37,6 +48,7 @@ const ja: LocaleDict = {
       title: '日本生活をもっと簡単に',
       desc: '住宅購入費用、ビザポイント、税金計算——日本生活に必要な数字をワンストップで。',
       cta1: 'ツールを使う',
+      cta2: '記事を読む →',
     },
     tools: {
       title: '🧮 コアツール',
@@ -64,6 +76,17 @@ const ja: LocaleDict = {
         },
       },
     },
+    articles: {
+      title: '📝 最新記事',
+      desc: '日本生活のあれこれをわかりやすく解説。ビザから住宅購入、給与から物価まで。',
+      readMore: '続きを読む →',
+      items: {
+        costOfLiving: { title: '2025年 日本物価のすべて', desc: 'スーパーでの買い物、光熱費、外食、交通費——生活費のリアル。', date: '2025-06-15', tag: '生活ガイド' },
+        homeBuying: { title: '日本の住宅購入完全ガイド', desc: '物件探しから鍵の受け取りまで、頭金・ローン・諸費用を徹底解説。', date: '2025-06-12', tag: '不動産' },
+        salary: { title: '2025年 日本給与実態', desc: 'IT、製造、サービス——業種別平均給与と手取り額をまとめました。', date: '2025-06-08', tag: 'キャリア' },
+        visa: { title: '日本ビザ完全攻略', desc: '留学→就労→永住。在留資格の種類・条件・申請手順を網羅。', date: '2025-06-01', tag: 'ビザ' },
+      },
+    },
   },
   common: {
     langSwitch: '言語',
@@ -77,6 +100,11 @@ const ja: LocaleDict = {
     },
     toolsTitle: '全ツール',
     toolsDesc: '日本生活のためのオンライン計算ツール。',
+  },
+  articles: {
+    title: '📝 お役立ち記事',
+    desc: '日本生活に役立つ実用ガイドと最新情報。',
+    back: '← 記事一覧に戻る',
   },
   tools: {
     houseCalculator: { title: '住宅購入費用計算', desc: '日本での住宅購入にかかる全費用を明細計算——仲介手数料・税金・ローン金利。' },

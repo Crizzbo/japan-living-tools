@@ -5,19 +5,24 @@ export interface LocaleDict {
   header: {
     logo: string
     nav: Record<string, string> // key → label
+    articles: string
   }
   // Footer
   footer: {
     about: { title: string; desc: string }
     tools: { title: string; nav: Record<string, string> }
+    articles: { title: string; nav: Record<string, string> }
     disclaimer: { title: string; desc: string }
     bottom: string
   }
   // Home
   home: {
-    hero: { badge: string; title: string; desc: string; cta1: string }
+    hero: { badge: string; title: string; desc: string; cta1: string; cta2: string }
     tools: { title: string; desc: string; cards: Record<string, { title: string; desc: string; cta: string }> }
+    articles: { title: string; desc: string; readMore: string; items: Record<string, { title: string; desc: string; date: string; tag: string }> }
   }
+  // Articles
+  articles: { title: string; desc: string; back: string }
   // Common
   common: {
     langSwitch: string

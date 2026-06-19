@@ -3,12 +3,14 @@ import type { LocaleDict } from './types'
 const zh: LocaleDict = {
   header: {
     logo: '🗾 Japan Living Tools',
+    articles: '📝 实用文章',
     nav: {
       home: '首页',
       houseCalculator: '购房计算器',
       hsPointCalculator: '高度人材积分',
       salaryCalculator: '税后工资',
       rentVsBuy: '买房vs租房',
+      articles: '实用文章',
     },
   },
   footer: {
@@ -25,6 +27,15 @@ const zh: LocaleDict = {
         rentVsBuy: '买房vs租房对比',
       },
     },
+    articles: {
+      title: '📝 实用文章',
+      nav: {
+        costOfLiving: '日本物价',
+        homeBuying: '日本买房攻略',
+        salary: '日本工资',
+        visa: '日本签证',
+      },
+    },
     disclaimer: {
       title: 'ℹ️ 免责声明',
       desc: '本网站内容仅供参考，实际费用因个人条件而异。计算结果不构成任何投资或购房建议。',
@@ -37,6 +48,7 @@ const zh: LocaleDict = {
       title: '日本生活をもっと簡単に',
       desc: '购房费用、签证积分、税务计算——在日生活所需的关键数字，一站式算出。',
       cta1: '开始使用工具',
+      cta2: '查看文章 →',
     },
     tools: {
       title: '🧮 核心工具',
@@ -64,6 +76,17 @@ const zh: LocaleDict = {
         },
       },
     },
+    articles: {
+      title: '📝 最新文章',
+      desc: '了解日本生活方方面面，从签证到购房，从工资到物价。',
+      readMore: '阅读全文 →',
+      items: {
+        costOfLiving: { title: '2025年日本物价全解析', desc: '超市购物、水电煤、外出就餐、交通出行——一天到底花多少？', date: '2025-06-15', tag: '生活指南' },
+        homeBuying: { title: '日本买房完全指南', desc: '从看房到拿钥匙，首付、贷款、税费全流程拆解。', date: '2025-06-12', tag: '房产' },
+        salary: { title: '2025年日本工资水平详解', desc: 'IT、制造业、服务业等各行业平均工资与到手金额一网打尽。', date: '2025-06-08', tag: '职场' },
+        visa: { title: '日本签证全攻略', desc: '从留学到工作到永住——在留资格的分类、条件与申请流程。', date: '2025-06-01', tag: '签证' },
+      },
+    },
   },
   common: {
     langSwitch: '语言',
@@ -77,6 +100,11 @@ const zh: LocaleDict = {
     },
     toolsTitle: '全部工具',
     toolsDesc: '为日本生活打造的在线计算工具。',
+  },
+  articles: {
+    title: '📝 实用文章',
+    desc: '日本生活方方面面的实用指南与最新信息。',
+    back: '← 返回文章列表',
   },
   tools: {
     houseCalculator: { title: '购房费用计算器', desc: '计算日本购房全部費用明细——中介费、税费、贷款利息。' },

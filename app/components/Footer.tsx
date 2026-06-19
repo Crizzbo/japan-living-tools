@@ -4,11 +4,18 @@ import Link from 'next/link'
 import { useT } from '@/lib/i18n'
 
 const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
+const articleKeys = ['costOfLiving', 'homeBuying', 'salary', 'visa'] as const
 const toolHrefs: Record<string, string> = {
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
   salaryCalculator: '/tools/salary-calculator',
   rentVsBuy: '/tools/rent-vs-buy',
+}
+const articleHrefs: Record<string, string> = {
+  costOfLiving: '/articles/japan-cost-of-living',
+  homeBuying: '/articles/japan-home-buying-guide',
+  salary: '/articles/japan-salary-guide',
+  visa: '/articles/japan-visa-guide',
 }
 
 export default function Footer() {
@@ -40,6 +47,14 @@ export default function Footer() {
             <h4>{t.footer.tools.title}</h4>
             {toolKeys.map(key => (
               <Link key={key} href={toolHrefs[key]}>{t.footer.tools.nav[key]}</Link>
+            ))}
+          </div>
+
+          {/* 文章 */}
+          <div className="footer-col">
+            <h4>{t.footer.articles.title}</h4>
+            {articleKeys.map(key => (
+              <Link key={key} href={articleHrefs[key]}>{t.footer.articles.nav[key]}</Link>
             ))}
           </div>
 
