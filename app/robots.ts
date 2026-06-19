@@ -4,7 +4,7 @@ import type { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 // ⚠️ 部署前替换为你的实际域名
-const BASE_URL = 'https://your-domain.com'
+const BASE_URL = 'https://japan-living-tools.vercel.app'
 
 export default function robots(): MetadataRoute.Robots {
   return {
