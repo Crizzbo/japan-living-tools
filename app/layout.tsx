@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   keywords: ['日本购房', '日本买房', '购房计算器', '高度人材', '税后工资', '买房租房对比', 'Next.js'],
   authors: [{ name: 'Japan Living Tools' }],
   verification: {
-    google: 'YOUR_GOOGLE_SITE_VERIFICATION_CODE',
+    google: 'googlec2a7130db270ea35',
   },
   openGraph: {
     type: 'website',
