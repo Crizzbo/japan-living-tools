@@ -10,17 +10,12 @@ const withMDX = createMDX({
 })
 
 const nextConfig = {
-  // 静态导出 → Cloudflare Pages
-  output: 'export',
+  // Vercel 原生部署，使用默认 SSR/SSG（不强制 static export）
 
   // 允许 MDX 文件作为页面
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 
-  // 静态资源路径（Cloudflare Pages 默认 /）
-  basePath: '',
-  assetPrefix: '/',
-
-  // 图片优化（静态导出需关闭默认优化器，或使用 unoptimized）
+  // 图片优化
   images: {
     unoptimized: true,
   },
