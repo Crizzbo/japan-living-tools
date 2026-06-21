@@ -166,7 +166,7 @@ export default function RentVsBuyPage() {
       </p>
 
       {/* Input Section */}
-      <div style={{
+      <section aria-label="入力" style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
         gap: 16,
@@ -209,10 +209,10 @@ export default function RentVsBuyPage() {
 
           <Field label={rv.rentFields.compareYears} value={compareYears} onChange={setCompareYears} min={5} max={50} step={5} unit={rv.units.years} />
         </div>
-      </div>
+      </section>
 
       {/* Results */}
-      <div style={{
+      <section aria-label="比較結果" style={{
         background: '#fff',
         borderRadius: 12,
         padding: '24px 28px',
@@ -283,11 +283,11 @@ export default function RentVsBuyPage() {
             </tbody>
           </table>
         </div>
-      </div>
+      </section>
 
       {/* Verdict */}
       {final && (
-        <div style={{
+        <aside role="note" style={{
           background: final.netDiff > 0
             ? 'linear-gradient(135deg, #1e8e3e, #0d6529)'
             : 'linear-gradient(135deg, #1a73e8, #0d47a1)',
@@ -307,7 +307,7 @@ export default function RentVsBuyPage() {
             <br />
             {rv.verdictDisclaimer}
           </p>
-        </div>
+        </aside>
       )}
     </div>
   )

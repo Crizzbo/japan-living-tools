@@ -197,7 +197,7 @@ export default function LoanCalculator() {
       </header>
 
       {/* ─── 输入区 ─── */}
-      <section className={styles.card}>
+      <section aria-label="入力" className={styles.card}>
         <h2>{lc.formSectionTitle}</h2>
         <div className={styles.formGrid}>
           <div className={styles.formGroup}>
@@ -258,7 +258,7 @@ export default function LoanCalculator() {
       </section>
 
       {/* ─── 摘要区 ─── */}
-      <div className={styles.summaryGrid}>
+      <section aria-label="サマリー" className={styles.summaryGrid}>
         <div className={styles.summaryItem}>
           <div className={styles.sLabel}>{lc.summary.housePrice}</div>
           <div className={styles.sValue}>{toMan(priceYen)}</div>
@@ -275,10 +275,10 @@ export default function LoanCalculator() {
           <div className={styles.sLabel}>{lc.summary.monthlyPayment}</div>
           <div className={styles.sValue}>{toMan(Math.round(loan.monthly))}</div>
         </div>
-      </div>
+      </section>
 
       {/* ─── 购房一次性费用 ─── */}
-      <section className={styles.card}>
+      <section aria-label="購入時費用" className={styles.card}>
         <h2>{lc.purchase.title}</h2>
         <table className={styles.resultTable}>
           <thead>
@@ -322,7 +322,7 @@ export default function LoanCalculator() {
       </section>
 
       {/* ─── 每年持有成本 ─── */}
-      <section className={styles.card}>
+      <section aria-label="年間持有コスト" className={styles.card}>
         <h2>{lc.annual.title}</h2>
         <table className={styles.resultTable}>
           <thead>
@@ -352,7 +352,7 @@ export default function LoanCalculator() {
       </section>
 
       {/* ─── 贷款还贷 ─── */}
-      <section className={styles.card}>
+      <section aria-label="ローン返済" className={styles.card}>
         <h2>{lo.title}</h2>
         <div className={styles.loanSummary}>
           <div className={styles.loanItem}>

@@ -133,7 +133,7 @@ export default function HsPointCalculator() {
       </p>
 
       {/* Form */}
-      <div style={{
+      <section aria-label="入力" style={{
         background: '#fff',
         borderRadius: 12,
         padding: '24px 28px',
@@ -357,10 +357,10 @@ export default function HsPointCalculator() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Result */}
-      <div style={{
+      <section aria-label="計算結果" style={{
         background: total >= 80
           ? 'linear-gradient(135deg, #1e8e3e, #0d6529)'
           : total >= 70
@@ -381,10 +381,10 @@ export default function HsPointCalculator() {
               ? hp.result70
               : hp.resultUnder70}
         </div>
-      </div>
+      </section>
 
       {/* Breakdown */}
-      <div style={{
+      <section aria-label="内訳" style={{
         background: '#fff',
         borderRadius: 12,
         padding: '20px 28px',
@@ -416,7 +416,7 @@ export default function HsPointCalculator() {
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
     </div>
   )
 }
