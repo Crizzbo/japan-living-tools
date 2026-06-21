@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
+import JsonLd from '@/app/components/JsonLd'
 
 // ── 高度人材ポイント計算表 ──
 // 基準: 出入国在留管理庁「高度専門職ポイント制」（高度専門・技術活動）
@@ -110,6 +111,16 @@ export default function HsPointCalculator() {
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto' }}>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        'name': '高度人材积分计算器',
+        'description': '出入国在留管理庁「高度専門職ポイント制」に準拠した积分计算',
+        'applicationCategory': 'FinanceApplication',
+        'operatingSystem': 'Web',
+        'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
+        'browserRequirements': 'Requires JavaScript',
+      }} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>
         {hp.title}
       </h1>

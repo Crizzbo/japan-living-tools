@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useT } from '@/lib/i18n'
 
 const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
-const articleKeys = ['costOfLiving', 'homeBuying', 'salary', 'visa'] as const
+const articleKeys = ['residenceTax', 'costOfLiving', 'homeBuying', 'salary', 'visa'] as const
 const toolHrefs: Record<string, string> = {
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
@@ -12,6 +12,7 @@ const toolHrefs: Record<string, string> = {
   rentVsBuy: '/tools/rent-vs-buy',
 }
 const articleHrefs: Record<string, string> = {
+  residenceTax: '/articles/japan-residence-tax-guide',
   costOfLiving: '/articles/japan-cost-of-living',
   homeBuying: '/articles/japan-home-buying-guide',
   salary: '/articles/japan-salary-guide',

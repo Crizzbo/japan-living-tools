@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import LoanCalculator from '@/app/components/LoanCalculator'
+import JsonLd from '@/app/components/JsonLd'
 
 export const metadata: Metadata = {
   title: '日本购房费用计算器',
@@ -12,5 +13,19 @@ export const metadata: Metadata = {
 }
 
 export default function HouseCalculatorPage() {
-  return <LoanCalculator />
+  return (
+    <>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        'name': '日本购房费用计算器',
+        'description': '日本购房一次性费用·每年持有成本·贷款还贷模拟',
+        'applicationCategory': 'FinanceApplication',
+        'operatingSystem': 'Web',
+        'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
+        'browserRequirements': 'Requires JavaScript',
+      }} />
+      <LoanCalculator />
+    </>
+  )
 }

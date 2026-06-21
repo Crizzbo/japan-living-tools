@@ -34,6 +34,7 @@ const en: LocaleDict = {
         homeBuying: 'Home Buying Guide',
         salary: 'Japan Salaries',
         visa: 'Japan Visas',
+        residenceTax: 'Residence Tax',
       },
     },
     disclaimer: {

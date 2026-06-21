@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
+import JsonLd from '@/app/components/JsonLd'
 
 // ── ローン月額返済額計算（元利均等） ──
 function calcMonthlyPayment(principal: number, annualRate: number, years: number): number {
@@ -147,6 +148,16 @@ export default function RentVsBuyPage() {
 
   return (
     <div style={{ maxWidth: 800, margin: '0 auto' }}>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        'name': '买房vs租房对比',
+        'description': '5~35年の累计支出を比较——データで決める住まいの選択',
+        'applicationCategory': 'FinanceApplication',
+        'operatingSystem': 'Web',
+        'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
+        'browserRequirements': 'Requires JavaScript',
+      }} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>
         {rv.title}
       </h1>

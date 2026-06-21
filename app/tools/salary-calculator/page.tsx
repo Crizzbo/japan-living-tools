@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
+import JsonLd from '@/app/components/JsonLd'
 
 // ── 令和7年(2025) 給与所得控除 ──
 function calcEmploymentDeduction(annualIncome: number): number {
@@ -106,13 +107,23 @@ export default function SalaryCalculator() {
 
   return (
     <div style={{ maxWidth: 720, margin: '0 auto' }}>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        'name': '日本税后工资计算器',
+        'description': '基于令和7年度税率，输入年收入自动计算日本税后到手金额',
+        'applicationCategory': 'FinanceApplication',
+        'operatingSystem': 'Web',
+        'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
+        'browserRequirements': 'Requires JavaScript',
+      }} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>{sc.title}</h1>
       <p style={{ color: '#5f6368', marginBottom: 24 }}>
         {sc.description}
       </p>
 
       {/* Input */}
-      <div style={{
+      <section aria-label="入力" style={{
         background: '#fff',
         borderRadius: 12,
         padding: '24px 28px',
@@ -162,10 +173,10 @@ export default function SalaryCalculator() {
           />
           {sc.over40Label}
         </label>
-      </div>
+      </section>
 
       {/* Result */}
-      <div style={{
+      <section aria-label="計算結果" style={{
         background: '#fff',
         borderRadius: 12,
         padding: '24px 28px',
@@ -235,9 +246,9 @@ export default function SalaryCalculator() {
             </tr>
           </tbody>
         </table>
-      </div>
+      </section>
 
-      <div style={{
+      <aside role="note" style={{
         background: '#e8f0fe',
         borderRadius: 8,
         padding: '14px 18px',
@@ -246,7 +257,7 @@ export default function SalaryCalculator() {
         lineHeight: 1.7,
       }}>
         {sc.note}
-      </div>
+      </aside>
     </div>
   )
 }

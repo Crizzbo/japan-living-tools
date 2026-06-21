@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import TabBar from './components/TabBar'
 import GoogleAnalytics from './components/GoogleAnalytics'
 import AdSense from './components/AdSense'
 import { I18nProvider } from '@/lib/i18n'
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <TabBar />
         </I18nProvider>
       </body>
     </html>

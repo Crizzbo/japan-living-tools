@@ -34,6 +34,7 @@ const zh: LocaleDict = {
         homeBuying: '日本买房攻略',
         salary: '日本工资',
         visa: '日本签证',
+        residenceTax: '住民税指南',
       },
     },
     disclaimer: {

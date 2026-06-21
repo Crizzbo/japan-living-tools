@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useT } from '@/lib/i18n'
 
 const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
-const articleKeys = ['costOfLiving', 'homeBuying', 'salary', 'visa'] as const
+const articleKeys = ['residenceTax', 'costOfLiving', 'homeBuying', 'salary', 'visa'] as const
 const toolIcons: Record<string, string> = {
   houseCalculator: '🏠',
   hsPointCalculator: '📊',
@@ -18,6 +18,7 @@ const toolHrefs: Record<string, string> = {
   rentVsBuy: '/tools/rent-vs-buy',
 }
 const articleHrefs: Record<string, string> = {
+  residenceTax: '/articles/japan-residence-tax-guide',
   costOfLiving: '/articles/japan-cost-of-living',
   homeBuying: '/articles/japan-home-buying-guide',
   salary: '/articles/japan-salary-guide',
@@ -34,9 +35,12 @@ const tagClasses: Record<string, string> = {
   'キャリア': 'tag tag-purple',
   '职场': 'tag tag-purple',
   'Career': 'tag tag-purple',
-  'ビザ': 'tag',
-  '签证': 'tag',
-  'Visa': 'tag',
+  'ビザ': 'tag tag-red',
+  '签证': 'tag tag-red',
+  'Visa': 'tag tag-red',
+  '税務': 'tag tag-blue',
+  '税务': 'tag tag-blue',
+  'Tax': 'tag tag-blue',
 }
 
 export default function Home() {

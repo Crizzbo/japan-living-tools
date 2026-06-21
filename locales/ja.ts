@@ -34,6 +34,7 @@ const ja: LocaleDict = {
         homeBuying: '日本の住宅購入',
         salary: '日本の給与',
         visa: '日本ビザ',
+        residenceTax: '住民税ガイド',
       },
     },
     disclaimer: {

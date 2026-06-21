@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getAllSlugs, getArticle } from '@/lib/articles'
 import type { Metadata } from 'next'
+import JsonLd from '@/app/components/JsonLd'
 
 export function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
@@ -46,6 +47,18 @@ export default async function ArticlePage({
 
   return (
     <div>
+      <JsonLd data={{
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'headline': article.title,
+        'datePublished': article.date,
+        'author': { '@type': 'Organization', 'name': 'Japan Living Tools' },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'Japan Living Tools',
+          'url': 'https://japan-living-tools.vercel.app',
+        },
+      }} />
       <Link
         href="/articles"
         style={{
