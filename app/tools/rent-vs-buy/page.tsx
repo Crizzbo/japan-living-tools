@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 // ── ローン月額返済額計算（元利均等） ──
 function calcMonthlyPayment(principal: number, annualRate: number, years: number): number {
@@ -158,6 +159,7 @@ export default function RentVsBuyPage() {
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
         'browserRequirements': 'Requires JavaScript',
       }} />
+      <Breadcrumbs items={[{ label: t.common.breadcrumbTools, href: '/tools' }, { label: rv.title }]} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>
         {rv.title}
       </h1>

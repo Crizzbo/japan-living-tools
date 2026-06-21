@@ -2,6 +2,7 @@
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 // ── City CPI data (national avg = 100) ──
 const cityData: Record<string, {
@@ -101,6 +102,7 @@ export default function CityCostPage() {
         'operatingSystem': 'Web',
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
       }} />
+      <Breadcrumbs items={[{ label: t.common.breadcrumbTools, href: '/tools' }, { label: ct.title }]} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>{ct.title}</h1>
       <p style={{ color: '#5f6368', marginBottom: 24 }}>{ct.description}</p>
 

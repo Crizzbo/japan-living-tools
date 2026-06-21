@@ -2,6 +2,7 @@
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 // 住民税所得割计算（简化版）
 function calcEmploymentDeduction(income: number): number {
@@ -82,6 +83,7 @@ export default function FurusatoPage() {
         'operatingSystem': 'Web',
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
       }} />
+      <Breadcrumbs items={[{ label: t.common.breadcrumbTools, href: '/tools' }, { label: ft.title }]} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>
         {ft.title}
       </h1>

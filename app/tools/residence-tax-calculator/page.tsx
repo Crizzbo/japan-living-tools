@@ -2,6 +2,7 @@
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 // Employment income deduction (Reiwa 7)
 function calcEmploymentDeduction(income: number): number {
@@ -75,6 +76,7 @@ export default function ResidenceTaxPage() {
         'operatingSystem': 'Web',
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
       }} />
+      <Breadcrumbs items={[{ label: t.common.breadcrumbTools, href: '/tools' }, { label: rt.title }]} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>
         {rt.title}
       </h1>

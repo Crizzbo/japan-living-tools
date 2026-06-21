@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import LoanCalculator from '@/app/components/LoanCalculator'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: '日本购房费用计算器',
@@ -25,6 +26,7 @@ export default function HouseCalculatorPage() {
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
         'browserRequirements': 'Requires JavaScript',
       }} />
+      <Breadcrumbs items={[{ label: 'ツール', href: '/tools' }, { label: '日本购房费用計算器' }]} />
       <LoanCalculator />
     </>
   )

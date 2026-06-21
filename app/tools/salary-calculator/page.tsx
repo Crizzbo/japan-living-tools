@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 // ── 令和7年(2025) 給与所得控除 ──
 function calcEmploymentDeduction(annualIncome: number): number {
@@ -117,6 +118,7 @@ export default function SalaryCalculator() {
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
         'browserRequirements': 'Requires JavaScript',
       }} />
+      <Breadcrumbs items={[{ label: t.common.breadcrumbTools, href: '/tools' }, { label: sc.title }]} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>{sc.title}</h1>
       <p style={{ color: '#5f6368', marginBottom: 24 }}>
         {sc.description}

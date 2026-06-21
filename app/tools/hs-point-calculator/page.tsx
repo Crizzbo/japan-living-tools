@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { useT } from '@/lib/i18n'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
 
 // ── 高度人材ポイント計算表 ──
 // 基準: 出入国在留管理庁「高度専門職ポイント制」（高度専門・技術活動）
@@ -121,6 +122,7 @@ export default function HsPointCalculator() {
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
         'browserRequirements': 'Requires JavaScript',
       }} />
+      <Breadcrumbs items={[{ label: t.common.breadcrumbTools, href: '/tools' }, { label: hp.title }]} />
       <h1 style={{ fontSize: '1.5em', fontWeight: 700, marginBottom: 8 }}>
         {hp.title}
       </h1>
