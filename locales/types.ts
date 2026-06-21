@@ -41,6 +41,9 @@ export interface LocaleDict {
   hsPointCalculator: HsPointCalculatorDict
   salaryCalculator: SalaryCalculatorDict
   rentVsBuy: RentVsBuyDict
+  residenceTax: ResidenceTaxDict
+  furusato: FurusatoDict
+  cityCost: CityCostDict
 }
 
 // ─── 购房计算器 (House/Loan Calculator) ───
@@ -255,3 +258,50 @@ export const LANGS: { code: Lang; label: string; native: string }[] = [
   { code: 'ja', label: '日本語', native: '日本語' },
   { code: 'en', label: 'English', native: 'English' },
 ]
+
+// ─── 住民税计算器 ───
+
+export interface ResidenceTaxDict {
+  title: string; description: string
+  formTitle: string; annualIncome: string; manYen: string
+  ageGroup: string; under40: string; over40: string
+  dependents: string; personUnit: string
+  resultTitle: string; exemptMessage: string
+  annualLabel: string; monthlyLabel: string; taxRate: string
+  colItem: string; colAmount: string
+  rowIncome: string; rowDeduction: string; rowEmploymentIncome: string
+  rowSocialInsurance: string; rowBasicDeduction: string; rowDependentDeduction: string
+  rowTaxableIncome: string; rowIncomePortion: string; rowPerCapita: string
+  rowTotal: string
+  noteTitle: string; noteContent: string
+}
+
+// ─── 故乡税模拟器 ───
+
+export interface FurusatoDict {
+  title: string; description: string
+  formTitle: string; annualIncome: string; manYen: string
+  ageGroup: string; under40: string; over40: string
+  dependents: string; personUnit: string
+  limitLabel: string; selfPayNote: string
+  simTitle: string; donationAmount: string; overLimitWarning: string
+  totalDeduction: string; selfPayLabel: string
+  rowDonation: string; rowIncomeDeduction: string; rowResidenceTaxDeduction: string
+  rowTotalDeduction: string
+  returnRatePrefix: string; returnRateSuffix: string
+  noteTitle: string; noteContent: string
+}
+
+// ─── 都市生活费计算器 ───
+
+export interface CityCostDict {
+  title: string; description: string
+  formTitle: string; cityLabel: string; roomLabel: string; lifestyleLabel: string
+  resultSuffix: string; monthlyTotal: string; annualTotal: string
+  colItem: string; colMonthly: string; colRatio: string
+  rowRent: string; rowFood: string; rowUtility: string; rowInternet: string
+  rowPhone: string; rowTransport: string; rowEntertainment: string
+  rowMisc: string; rowInsurance: string; rowTotal: string
+  comparisonTitle: string
+  noteTitle: string; noteContent: string
+}

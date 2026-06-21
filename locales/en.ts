@@ -10,6 +10,9 @@ const en: LocaleDict = {
       hsPointCalculator: 'HSFP Score',
       salaryCalculator: 'Take-home Pay',
       rentVsBuy: 'Rent vs Buy',
+      residenceTaxCalculator: 'Resident Tax',
+      furusatoCalculator: 'Furusato',
+      cityCostCalculator: 'Cost of Living',
       articles: 'Articles',
     },
   },
@@ -25,6 +28,9 @@ const en: LocaleDict = {
         hsPointCalculator: 'HSFP Score',
         salaryCalculator: 'Take-home Pay',
         rentVsBuy: 'Rent vs Buy',
+        residenceTaxCalculator: 'Resident Tax',
+        furusatoCalculator: 'Furusato Nōzei',
+        cityCostCalculator: 'City Cost',
       },
     },
     articles: {
@@ -75,6 +81,21 @@ const en: LocaleDict = {
           desc: 'Compare cumulative costs over 5–35 years. Make your housing decision with data.',
           cta: 'Compare →',
         },
+        residenceTaxCalculator: {
+          title: '🏛️ Resident Tax',
+          desc: '10% income-based + ¥5,000 per-capita. Dependent deductions included.',
+          cta: 'Calculate →',
+        },
+        furusatoCalculator: {
+          title: '🎁 Furusato Nōzei',
+          desc: 'Simulate deduction limits and tax savings.',
+          cta: 'Simulate →',
+        },
+        cityCostCalculator: {
+          title: '🏙️ City Cost of Living',
+          desc: '8 cities, price-index adjusted monthly costs.',
+          cta: 'Calculate →',
+        },
       },
     },
     articles: {
@@ -113,6 +134,9 @@ const en: LocaleDict = {
     hsPointCalculator: { title: 'HSFP Points Calculator', desc: 'Based on the Immigration Services Agency official points system.' },
     salaryCalculator: { title: 'Take-home Pay Calculator', desc: 'Accurate net pay calculation using FY2025 tax rates.' },
     rentVsBuy: { title: 'Rent vs Buy Comparison', desc: 'Data-driven housing decision tool.' },
+    residenceTaxCalculator: { title: 'Resident Tax Calculator', desc: 'Income-based + per-capita tax auto-calc.' },
+    furusatoCalculator: { title: 'Furusato Nōzei Simulator', desc: 'Deduction limit & tax savings calculator.' },
+    cityCostCalculator: { title: 'City Cost of Living', desc: '8-city monthly cost adjusted by price index.' },
   },
 
   // ─── Home Purchase Cost Calculator ───
@@ -291,6 +315,50 @@ const en: LocaleDict = {
     verdictBuyReason: 'Buying builds equity through mortgage repayment, resulting in lower net cost than renting over the long term.',
     verdictRentReason: 'Renting requires less upfront capital and offers more flexibility. Better if you plan to stay short-term.',
     verdictDisclaimer: 'Consider your life plan (job transfers, family changes, etc.) when making your decision.',
+  },
+
+  residenceTax: {
+    title: '🏛️ Resident Tax Calculator',
+    description: 'Auto-calculate resident tax (income-based + per-capita) from annual income. Supports dependent deductions.',
+    formTitle: 'Input', annualIncome: 'Annual Income (gross)', manYen: 'man yen',
+    ageGroup: 'Age Group', under40: 'Under 40', over40: '40 or older',
+    dependents: 'Number of dependents', personUnit: '',
+    resultTitle: 'Result', exemptMessage: 'Resident tax is exempt',
+    annualLabel: 'Resident Tax (annual)', monthlyLabel: 'Resident Tax (monthly)', taxRate: 'Tax Rate',
+    colItem: 'Item', colAmount: 'Amount',
+    rowIncome: 'Employment Income', rowDeduction: 'Employment Deduction', rowEmploymentIncome: 'Employment Earnings',
+    rowSocialInsurance: 'Social Insurance', rowBasicDeduction: 'Basic Deduction', rowDependentDeduction: 'Dependent Deduction',
+    rowTaxableIncome: 'Taxable Income', rowIncomePortion: 'Income Portion (10%)', rowPerCapita: 'Per-Capita (¥5,000)',
+    rowTotal: 'Resident Tax Total',
+    noteTitle: 'About Calculation', noteContent: 'This is an estimate. Actual amounts vary by municipality. Other deductions not included. Check your tax notice for exact figures.',
+  },
+
+  furusato: {
+    title: '🎁 Furusato Nōzei Simulator',
+    description: 'Calculate your deduction limit and tax savings for furusato nōzei donations.',
+    formTitle: 'Basic Info', annualIncome: 'Annual Income (gross)', manYen: 'man yen',
+    ageGroup: 'Age Group', under40: 'Under 40', over40: '40 or older',
+    dependents: 'Number of dependents', personUnit: '',
+    limitLabel: 'Estimated Deduction Limit', selfPayNote: 'Max donations with only ¥2,000 self-pay',
+    simTitle: 'Donation Simulation', donationAmount: 'Donation Amount', overLimitWarning: 'Over the limit. Excess is self-paid.',
+    totalDeduction: 'Total Deduction', selfPayLabel: 'Net Self-Pay',
+    rowDonation: 'Donation', rowIncomeDeduction: 'Income Tax Deduction', rowResidenceTaxDeduction: 'Resident Tax Deduction',
+    rowTotalDeduction: 'Total Deduction',
+    returnRatePrefix: '', returnRateSuffix: 'of donation is deductible',
+    noteTitle: 'About Calculation', noteContent: 'This is an estimate. Actual deductions depend on income tax rate and resident tax. Mortgage deductions may reduce limits. Check the official portal for accurate figures.',
+  },
+
+  cityCost: {
+    title: '🏙️ City Cost of Living Calculator',
+    description: 'Auto-calculate monthly living costs across 8 Japanese cities. 9 categories adjusted by local price indices.',
+    formTitle: 'Select Conditions', cityLabel: 'City', roomLabel: 'Room Type', lifestyleLabel: 'Lifestyle',
+    resultSuffix: ' Monthly Cost', monthlyTotal: 'Monthly Total', annualTotal: 'Annual Total',
+    colItem: 'Item', colMonthly: 'Monthly', colRatio: 'Ratio',
+    rowRent: 'Rent', rowFood: 'Food', rowUtility: 'Utilities', rowInternet: 'Internet',
+    rowPhone: 'Phone', rowTransport: 'Transport', rowEntertainment: 'Entertainment',
+    rowMisc: 'Miscellaneous', rowInsurance: 'Insurance/Medical', rowTotal: 'Total',
+    comparisonTitle: 'City Comparison',
+    noteTitle: 'About Calculation', noteContent: 'This is an estimate. Rents based on average market rates. Actual costs vary by area and lifestyle. Commuter passes and housing allowances not considered.',
   },
 }
 

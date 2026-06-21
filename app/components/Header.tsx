@@ -5,13 +5,16 @@ import { useState, useRef, useEffect } from 'react'
 import { useT } from '@/lib/i18n'
 import type { Lang } from '@/locales/types'
 
-const navKeys = ['home', 'houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy', 'articles'] as const
+const navKeys = ['home', 'houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy', 'residenceTaxCalculator', 'furusatoCalculator', 'cityCostCalculator', 'articles'] as const
 const navHrefs: Record<string, string> = {
   home: '/',
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
   salaryCalculator: '/tools/salary-calculator',
   rentVsBuy: '/tools/rent-vs-buy',
+  residenceTaxCalculator: '/tools/residence-tax-calculator',
+  furusatoCalculator: '/tools/furusato-calculator',
+  cityCostCalculator: '/tools/city-cost-calculator',
   articles: '/articles',
 }
 
@@ -21,7 +24,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Scroll-aware glassmorphism
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 10)
@@ -31,7 +33,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close dropdown on outside click
   useEffect(() => {
     if (!langOpen) return
     function onDown(e: MouseEvent) {
@@ -46,12 +47,10 @@ export default function Header() {
   return (
     <header className={`site-header${scrolled ? ' scrolled' : ''}`}>
       <div className="header-top-row">
-        {/* Logo */}
         <Link href="/" className="header-logo">
           {t.header.logo}
         </Link>
 
-        {/* Language Switcher */}
         <div ref={containerRef} className="header-lang-wrap">
           <button
             onClick={() => setLangOpen(v => !v)}
@@ -78,7 +77,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Always-visible nav bar */}
       <nav className="header-nav-bar" role="navigation" aria-label="Main">
         {navKeys.map(key => (
           <Link

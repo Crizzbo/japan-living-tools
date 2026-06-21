@@ -3,18 +3,24 @@
 import Link from 'next/link'
 import { useT } from '@/lib/i18n'
 
-const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
+const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy', 'residenceTaxCalculator', 'furusatoCalculator', 'cityCostCalculator'] as const
 const toolEmoji: Record<string, string> = {
-  houseCalculator: '🏠',
-  hsPointCalculator: '📊',
-  salaryCalculator: '💰',
-  rentVsBuy: '⚖️',
+  houseCalculator: '\u{1F3E0}',
+  hsPointCalculator: '\u{1F4CA}',
+  salaryCalculator: '\u{1F4B0}',
+  rentVsBuy: '\u2696\uFE0F',
+  residenceTaxCalculator: '\u{1F3DB}\uFE0F',
+  furusatoCalculator: '\u{1F381}',
+  cityCostCalculator: '\u{1F3D9}\uFE0F',
 }
 const toolHrefs: Record<string, string> = {
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
   salaryCalculator: '/tools/salary-calculator',
   rentVsBuy: '/tools/rent-vs-buy',
+  residenceTaxCalculator: '/tools/residence-tax-calculator',
+  furusatoCalculator: '/tools/furusato-calculator',
+  cityCostCalculator: '/tools/city-cost-calculator',
 }
 
 export default function ToolsPage() {
@@ -23,7 +29,7 @@ export default function ToolsPage() {
   return (
     <div>
       <h2 style={{ fontSize: '1.4em', fontWeight: 700, marginBottom: '8px' }}>
-        🛠️ {t.common.toolsTitle}
+        {'\u{1F6E0}\uFE0F '}{t.common.toolsTitle}
       </h2>
       <p style={{ color: '#5f6368', marginBottom: '24px' }}>
         {t.common.toolsDesc}

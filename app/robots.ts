@@ -1,9 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-// Static export 需要此声明
-export const dynamic = 'force-static'
-
-// ⚠️ 部署前替换为你的实际域名
+// Sitemap is generated dynamically; robots.txt lists it for search engines
 const BASE_URL = 'https://japan-living-tools.vercel.app'
 
 export default function robots(): MetadataRoute.Robots {

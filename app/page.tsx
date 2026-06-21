@@ -3,19 +3,25 @@
 import Link from 'next/link'
 import { useT } from '@/lib/i18n'
 
-const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
+const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy', 'residenceTaxCalculator', 'furusatoCalculator', 'cityCostCalculator'] as const
 const articleKeys = ['residenceTax', 'costOfLiving', 'homeBuying', 'salary', 'visa'] as const
 const toolIcons: Record<string, string> = {
-  houseCalculator: '🏠',
-  hsPointCalculator: '📊',
-  salaryCalculator: '💰',
-  rentVsBuy: '⚖️',
+  houseCalculator: '\u{1F3E0}',
+  hsPointCalculator: '\u{1F4CA}',
+  salaryCalculator: '\u{1F4B0}',
+  rentVsBuy: '\u2696\uFE0F',
+  residenceTaxCalculator: '\u{1F3DB}\uFE0F',
+  furusatoCalculator: '\u{1F381}',
+  cityCostCalculator: '\u{1F3D9}\uFE0F',
 }
 const toolHrefs: Record<string, string> = {
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
   salaryCalculator: '/tools/salary-calculator',
   rentVsBuy: '/tools/rent-vs-buy',
+  residenceTaxCalculator: '/tools/residence-tax-calculator',
+  furusatoCalculator: '/tools/furusato-calculator',
+  cityCostCalculator: '/tools/city-cost-calculator',
 }
 const articleHrefs: Record<string, string> = {
   residenceTax: '/articles/japan-residence-tax-guide',
@@ -26,21 +32,24 @@ const articleHrefs: Record<string, string> = {
 }
 
 const tagClasses: Record<string, string> = {
-  '生活ガイド': 'tag tag-green',
-  '生活指南': 'tag tag-green',
+  // ja
+  '\u751F\u6D3B\u30AC\u30A4\u30C9': 'tag tag-green',
+  '\u4E0D\u52D5\u7523': 'tag tag-orange',
+  '\u30AD\u30E3\u30EA\u30A2': 'tag tag-purple',
+  '\u30D3\u30B6': 'tag tag-red',
+  '\u7A0E\u52D9': 'tag tag-blue',
+  // en
   'Living': 'tag tag-green',
-  '不動産': 'tag tag-orange',
-  '房产': 'tag tag-orange',
   'Real Estate': 'tag tag-orange',
-  'キャリア': 'tag tag-purple',
-  '职场': 'tag tag-purple',
   'Career': 'tag tag-purple',
-  'ビザ': 'tag tag-red',
-  '签证': 'tag tag-red',
   'Visa': 'tag tag-red',
-  '税務': 'tag tag-blue',
-  '税务': 'tag tag-blue',
   'Tax': 'tag tag-blue',
+  // zh
+  '\u751F\u6D3B\u6307\u5357': 'tag tag-green',
+  '\u623F\u4EA7': 'tag tag-orange',
+  '\u804C\u573A': 'tag tag-purple',
+  '\u7B7E\u8BC1': 'tag tag-red',
+  '\u7A0E\u52A1': 'tag tag-blue',
 }
 
 export default function Home() {
@@ -48,7 +57,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* ── Hero ── */}
+      {/* Hero */}
       <section className="hero-section">
         <div className="hero-content">
           <span style={{
@@ -68,7 +77,7 @@ export default function Home() {
           <p>{t.home.hero.desc}</p>
           <div className="hero-cta">
             <Link href="/tools/house-calculator" className="btn-primary">
-              🏠 {t.home.hero.cta1}
+              {'\u{1F3E0}'} {t.home.hero.cta1}
             </Link>
             <Link href="/articles" className="btn-outline">
               {t.home.hero.cta2}
@@ -77,7 +86,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 核心工具区 (4 Cards) ── */}
+      {/* Core Tools (4 Cards) */}
       <h2 className="section-title">{t.home.tools.title}</h2>
       {t.home.tools.desc && (
         <p style={{ color: '#5f6368', marginBottom: 24, marginTop: -8, fontSize: '0.95em', fontWeight: 500 }}>
@@ -85,7 +94,7 @@ export default function Home() {
         </p>
       )}
       <div className="tool-grid">
-        {toolKeys.map((key, i) => {
+        {toolKeys.slice(0, 4).map((key, i) => {
           const card = t.home.tools.cards[key]
           return (
             <Link key={key} href={toolHrefs[key]} className={`tool-card animate-in-${i + 1}`}>
@@ -102,7 +111,28 @@ export default function Home() {
         })}
       </div>
 
-      {/* ── 最新文章 ── */}
+      {/* More Tools */}
+      <h2 className="section-title" style={{ marginTop: 8 }}>{t.common.toolsTitle}</h2>
+      <div className="tool-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+        {toolKeys.slice(4).map((key, i) => {
+          const card = t.home.tools.cards[key]
+          if (!card) return null
+          return (
+            <Link key={key} href={toolHrefs[key]} className={`tool-card animate-in-${i + 1}`}>
+              <div className="tool-card-inner">
+                <div className="tool-card-icon">{toolIcons[key]}</div>
+                <h3>{card.title}</h3>
+                <p>{card.desc}</p>
+                <span style={{ color: '#1a73e8', fontWeight: 700, fontSize: '0.88em', marginTop: 10, display: 'inline-block' }}>
+                  {card.cta}
+                </span>
+              </div>
+            </Link>
+          )
+        })}
+      </div>
+
+      {/* Latest Articles */}
       <h2 className="section-title" style={{ marginTop: 8 }}>{t.home.articles.title}</h2>
       {t.home.articles.desc && (
         <p style={{ color: '#5f6368', marginBottom: 24, marginTop: -8, fontSize: '0.95em', fontWeight: 500 }}>

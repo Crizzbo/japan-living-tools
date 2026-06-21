@@ -10,6 +10,9 @@ const zh: LocaleDict = {
       hsPointCalculator: '高度人材积分',
       salaryCalculator: '税后工资',
       rentVsBuy: '买房vs租房',
+      residenceTaxCalculator: '住民税',
+      furusatoCalculator: '故乡税',
+      cityCostCalculator: '生活费',
       articles: '实用文章',
     },
   },
@@ -25,6 +28,9 @@ const zh: LocaleDict = {
         hsPointCalculator: '高度人材积分计算',
         salaryCalculator: '税后工资计算',
         rentVsBuy: '买房vs租房对比',
+        residenceTaxCalculator: '住民税计算',
+        furusatoCalculator: '故乡税模拟',
+        cityCostCalculator: '都市生活费',
       },
     },
     articles: {
@@ -75,6 +81,21 @@ const zh: LocaleDict = {
           desc: '5~35年对比——累计支出一目了然，用数据做置业决策。',
           cta: '开始对比 →',
         },
+        residenceTaxCalculator: {
+          title: '🏛️ 住民税计算',
+          desc: '所得割10%+均等割5,000日元，扶养抵扣全对应。',
+          cta: '计算 →',
+        },
+        furusatoCalculator: {
+          title: '🎁 故乡税',
+          desc: '抵扣额度与节税效果模拟。',
+          cta: '模拟 →',
+        },
+        cityCostCalculator: {
+          title: '🏙️ 都市生活费',
+          desc: '8城市物价指数自动调整月生活费。',
+          cta: '计算 →',
+        },
       },
     },
     articles: {
@@ -113,6 +134,9 @@ const zh: LocaleDict = {
     hsPointCalculator: { title: '高度人材积分计算', desc: '出入国在留管理庁「高度専門職ポイント制」準拠。' },
     salaryCalculator: { title: '税后工资计算器', desc: '令和7年最新税率，精确计算手取额。' },
     rentVsBuy: { title: '买房vs租房对比', desc: '数据驱动的置业决策工具。' },
+    residenceTaxCalculator: { title: '住民税计算器', desc: '所得割+均等割自动计算。' },
+    furusatoCalculator: { title: '故乡税模拟器', desc: '抵扣额度与节税效果计算。' },
+    cityCostCalculator: { title: '都市生活费计算', desc: '8城市物价指数调整月生活费。' },
   },
 
   // ─── 购房费用计算器 ───
@@ -291,6 +315,50 @@ const zh: LocaleDict = {
     verdictBuyReason: '购房的话，通过还贷可积累资产，最终实际负担比租房少。',
     verdictRentReason: '租房的话，初期费用低，灵活性高。短期居住计划的话租房更有利。',
     verdictDisclaimer: '实际判断时请综合考虑人生规划（调动可能性、家庭构成变化等）。',
+  },
+
+  residenceTax: {
+    title: '🏛️ 住民税计算器',
+    description: '根据年收入自动计算住民税（所得割+均等割），支持扶养抵扣。',
+    formTitle: '条件输入', annualIncome: '年收入（税前）', manYen: '万日元',
+    ageGroup: '年龄区分', under40: '40岁以下', over40: '40岁以上',
+    dependents: '扶养亲属人数', personUnit: '人',
+    resultTitle: '计算结果', exemptMessage: '住民税免税',
+    annualLabel: '住民税（年额）', monthlyLabel: '住民税（月额）', taxRate: '税率',
+    colItem: '项目', colAmount: '金额',
+    rowIncome: '工资收入', rowDeduction: '工资所得抵扣', rowEmploymentIncome: '工资所得',
+    rowSocialInsurance: '社会保险费抵扣', rowBasicDeduction: '基础抵扣', rowDependentDeduction: '扶养抵扣',
+    rowTaxableIncome: '应税所得', rowIncomePortion: '所得割（10%）', rowPerCapita: '均等割（5,000日元）',
+    rowTotal: '住民税合计',
+    noteTitle: '关于计算', noteContent: '本计算为概算，实际金额因市区町村而异。不含房贷抵扣、医疗费抵扣等。请以住民税决定通知书为准。',
+  },
+
+  furusato: {
+    title: '🎁 故乡税模拟器',
+    description: '根据年收入计算故乡税抵扣额度，模拟节税效果。',
+    formTitle: '基本信息', annualIncome: '年收入（税前）', manYen: '万日元',
+    ageGroup: '年龄区分', under40: '40岁以下', over40: '40岁以上',
+    dependents: '扶养亲属人数', personUnit: '人',
+    limitLabel: '抵扣额度参考值', selfPayNote: '自费2,000日元即可获得回馈品的上限',
+    simTitle: '捐赠模拟', donationAmount: '捐赠金额', overLimitWarning: '超出额度。超出部分需自费。',
+    totalDeduction: '抵扣合计', selfPayLabel: '实际自费',
+    rowDonation: '捐赠金额', rowIncomeDeduction: '所得税抵扣', rowResidenceTaxDeduction: '住民税抵扣',
+    rowTotalDeduction: '抵扣合计',
+    returnRatePrefix: '捐赠额的', returnRateSuffix: '可被抵扣',
+    noteTitle: '关于计算', noteContent: '本计算为概算，实际抵扣金额取决于所得税率和住民税额。房贷抵扣等可能降低额度。请以总务省故乡税门户网站为准。',
+  },
+
+  cityCost: {
+    title: '🏙️ 都市生活费计算器',
+    description: '日本8城市月生活费自动计算，9个项目按物价指数调整。',
+    formTitle: '选择条件', cityLabel: '居住城市', roomLabel: '房型', lifestyleLabel: '生活方式',
+    resultSuffix: '月生活费', monthlyTotal: '月额合计', annualTotal: '年额合计',
+    colItem: '项目', colMonthly: '月额', colRatio: '占比',
+    rowRent: '房租', rowFood: '餐饮', rowUtility: '水电燃气', rowInternet: '网络',
+    rowPhone: '手机', rowTransport: '交通', rowEntertainment: '娱乐交际',
+    rowMisc: '日用品杂费', rowInsurance: '保险医疗', rowTotal: '合计',
+    comparisonTitle: '城市对比',
+    noteTitle: '关于计算', noteContent: '本计算为概算，房租基于各城市平均行情。实际费用因居住区域和个人习惯差异较大，不含通勤定期券和公司住房补贴。',
   },
 }
 

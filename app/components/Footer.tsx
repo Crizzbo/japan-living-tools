@@ -3,13 +3,16 @@
 import Link from 'next/link'
 import { useT } from '@/lib/i18n'
 
-const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy'] as const
+const toolKeys = ['houseCalculator', 'hsPointCalculator', 'salaryCalculator', 'rentVsBuy', 'residenceTaxCalculator', 'furusatoCalculator', 'cityCostCalculator'] as const
 const articleKeys = ['residenceTax', 'costOfLiving', 'homeBuying', 'salary', 'visa'] as const
 const toolHrefs: Record<string, string> = {
   houseCalculator: '/tools/house-calculator',
   hsPointCalculator: '/tools/hs-point-calculator',
   salaryCalculator: '/tools/salary-calculator',
   rentVsBuy: '/tools/rent-vs-buy',
+  residenceTaxCalculator: '/tools/residence-tax-calculator',
+  furusatoCalculator: '/tools/furusato-calculator',
+  cityCostCalculator: '/tools/city-cost-calculator',
 }
 const articleHrefs: Record<string, string> = {
   residenceTax: '/articles/japan-residence-tax-guide',
