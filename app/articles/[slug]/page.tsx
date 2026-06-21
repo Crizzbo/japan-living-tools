@@ -3,7 +3,7 @@ import { getAllSlugs, getArticle, getArticles } from '@/lib/articles'
 import type { Metadata } from 'next'
 import JsonLd from '@/app/components/JsonLd'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
-import type { Lang } from '@/locales/types'
+import type { Lang, ArticleLocale } from '@/locales/types'
 
 // ── Static paths & metadata ──
 export function generateStaticParams() {
@@ -82,6 +82,16 @@ export default async function ArticlePage({
   const lang: Lang = (langCookie && ['ja', 'zh', 'en'].includes(langCookie)) ? langCookie as Lang : 'ja'
   const l = locale[lang]
 
+  // Load locale-specific article content
+  let localeArticle: ArticleLocale | undefined
+  if (lang === 'zh') {
+    const m = await import('@/lib/articles-zh')
+    localeArticle = m.default[slug]
+  } else if (lang === 'en') {
+    const m = await import('@/lib/articles-en')
+    localeArticle = m.default[slug]
+  }
+
   if (!article) {
     return (
       <div style={{ textAlign: 'center', padding: '60px 0' }}>
@@ -97,6 +107,9 @@ export default async function ArticlePage({
       </div>
     )
   }
+
+  const displayTitle = localeArticle?.title ?? article.title
+  const displayContent = localeArticle?.content ?? article.content
 
   // Related articles
   const relatedSlugs = relatedMap[slug] || []
@@ -122,7 +135,7 @@ export default async function ArticlePage({
 
       <Breadcrumbs items={[
         { label: l.breadcrumbArticles, href: '/articles' },
-        { label: article.title },
+        { label: displayTitle },
       ]} />
 
       <div style={{ marginBottom: 8 }}>
@@ -137,12 +150,12 @@ export default async function ArticlePage({
         lineHeight: 1.3,
         marginBottom: 24,
       }}>
-        {article.title}
+        {displayTitle}
       </h1>
 
       <div
         className="prose"
-        dangerouslySetInnerHTML={{ __html: article.content }}
+        dangerouslySetInnerHTML={{ __html: displayContent }}
       />
 
       {/* ── Related Articles ── */}

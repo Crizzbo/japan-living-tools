@@ -1,5 +1,11 @@
 // ── i18n 类型定义 ──
 
+export interface ArticleLocale {
+  title: string
+  desc: string
+  content: string
+}
+
 export interface LocaleDict {
   // Header
   header: {
