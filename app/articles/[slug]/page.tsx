@@ -37,11 +37,13 @@ export async function generateMetadata({
 
 // ── Related articles (by tag proximity) ──
 const relatedMap: Record<string, string[]> = {
-  'japan-residence-tax-guide': ['japan-salary-guide', 'japan-cost-of-living'],
-  'japan-cost-of-living': ['japan-salary-guide', 'japan-home-buying-guide'],
+  'japan-residence-tax-guide': ['japan-salary-guide', 'japan-furusato-nozei-guide'],
+  'japan-cost-of-living': ['japan-salary-guide', 'japan-home-buying-guide', 'japan-city-cost-comparison'],
   'japan-home-buying-guide': ['japan-cost-of-living', 'japan-residence-tax-guide'],
   'japan-salary-guide': ['japan-residence-tax-guide', 'japan-cost-of-living'],
   'japan-visa-guide': ['japan-salary-guide', 'japan-cost-of-living'],
+  'japan-furusato-nozei-guide': ['japan-residence-tax-guide', 'japan-salary-guide'],
+  'japan-city-cost-comparison': ['japan-cost-of-living', 'japan-salary-guide'],
 }
 
 // ── Lang → locale block ──

@@ -11,6 +11,8 @@ const slugToLocaleKey: Record<string, string> = {
   'japan-home-buying-guide': 'homeBuying',
   'japan-salary-guide': 'salary',
   'japan-visa-guide': 'visa',
+  'japan-furusato-nozei-guide': 'furusatoNozei',
+  'japan-city-cost-comparison': 'cityCostComparison',
 }
 
 const tagClasses: Record<string, string> = {
