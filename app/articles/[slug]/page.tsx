@@ -15,9 +15,20 @@ export async function generateMetadata({
   const { slug } = await params
   const article = getArticle(slug)
   if (!article) return { title: 'Article Not Found' }
+  const url = `https://japan-living-tools.vercel.app/articles/${slug}`
   return {
     title: article.title,
     description: article.desc,
+    keywords: [article.tag, '日本生活', '日本ガイド'],
+    openGraph: {
+      title: article.title,
+      description: article.desc,
+      type: 'article',
+      url,
+      publishedTime: article.date,
+      siteName: 'Japan Living Tools',
+    },
+    alternates: { canonical: url },
   }
 }
 

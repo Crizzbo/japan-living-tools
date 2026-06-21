@@ -352,13 +352,22 @@ body {
 }
 
 .tool-card:hover .tool-card-inner {
-  transform: translateY(-6px);
+  transform: translateY(-6px) scale(1.01);
   box-shadow: 0 12px 36px rgba(26,115,232,0.14), 0 2px 8px rgba(0,0,0,0.06);
   border-color: rgba(26,115,232,0.2);
 }
 
 .tool-card:hover .tool-card-inner::before {
   transform: scaleX(1);
+}
+
+.tool-card:hover .tool-card-icon {
+  transform: scale(1.12) rotate(-3deg);
+  background: linear-gradient(135deg, rgba(26,115,232,0.18), rgba(66,165,245,0.18));
+}
+
+.tool-card-icon {
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .tool-card-icon {
@@ -470,7 +479,7 @@ body {
 }
 
 .article-card:hover .article-card-inner {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.005);
   box-shadow: 0 8px 28px rgba(26,115,232,0.1), 0 2px 6px rgba(0,0,0,0.04);
   border-color: rgba(26,115,232,0.15);
 }

@@ -1,12 +1,18 @@
 import type { MetadataRoute } from 'next'
+import { getAllSlugs } from '@/lib/articles'
 
-// Static export 需要此声明
-export const dynamic = 'force-static'
-
-// ⚠️ 部署前替换为你的实际域名
 const BASE_URL = 'https://japan-living-tools.vercel.app'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const slugs = getAllSlugs()
+
+  const articleEntries: MetadataRoute.Sitemap = slugs.map(slug => ({
+    url: `${BASE_URL}/articles/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   return [
     {
       url: BASE_URL,
@@ -50,29 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.85,
     },
-    {
-      url: `${BASE_URL}/articles/japan-cost-of-living`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/articles/japan-home-buying-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/articles/japan-salary-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/articles/japan-visa-guide`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
+    ...articleEntries,
   ]
 }
