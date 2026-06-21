@@ -1,8 +1,11 @@
 import Link from 'next/link'
-import { getAllSlugs, getArticle } from '@/lib/articles'
+import { getAllSlugs, getArticle, getArticles } from '@/lib/articles'
 import type { Metadata } from 'next'
 import JsonLd from '@/app/components/JsonLd'
+import Breadcrumbs from '@/app/components/Breadcrumbs'
+import type { Lang } from '@/locales/types'
 
+// ── Static paths & metadata ──
 export function generateStaticParams() {
   return getAllSlugs().map(slug => ({ slug }))
 }
@@ -32,6 +35,38 @@ export async function generateMetadata({
   }
 }
 
+// ── Related articles (by tag proximity) ──
+const relatedMap: Record<string, string[]> = {
+  'japan-residence-tax-guide': ['japan-salary-guide', 'japan-cost-of-living'],
+  'japan-cost-of-living': ['japan-salary-guide', 'japan-home-buying-guide'],
+  'japan-home-buying-guide': ['japan-cost-of-living', 'japan-residence-tax-guide'],
+  'japan-salary-guide': ['japan-residence-tax-guide', 'japan-cost-of-living'],
+  'japan-visa-guide': ['japan-salary-guide', 'japan-cost-of-living'],
+}
+
+// ── Lang → locale block ──
+const locale = {
+  ja: {
+    back: '← 記事一覧に戻る',
+    notFound: '記事が見つかりません',
+    related: '関連記事',
+    breadcrumbArticles: '記事一覧',
+  },
+  zh: {
+    back: '← 返回文章列表',
+    notFound: '文章未找到',
+    related: '相关文章',
+    breadcrumbArticles: '文章列表',
+  },
+  en: {
+    back: '← Back to Articles',
+    notFound: 'Article Not Found',
+    related: 'Related Articles',
+    breadcrumbArticles: 'Articles',
+  },
+}
+
+// ── Server Component that reads cookies for lang ──
 export default async function ArticlePage({
   params,
 }: {
@@ -39,22 +74,34 @@ export default async function ArticlePage({
 }) {
   const { slug } = await params
   const article = getArticle(slug)
+  const { cookies } = await import('next/headers')
+  const cookieStore = await cookies()
+  const langCookie = cookieStore.get('lang')?.value
+  const lang: Lang = (langCookie && ['ja', 'zh', 'en'].includes(langCookie)) ? langCookie as Lang : 'ja'
+  const l = locale[lang]
 
   if (!article) {
     return (
       <div style={{ textAlign: 'center', padding: '60px 0' }}>
         <h2 style={{ fontSize: '1.5em', color: '#1a1a2e', marginBottom: 12 }}>
-          文章未找到
+          {l.notFound}
         </h2>
         <Link
           href="/articles"
           style={{ color: '#1a73e8', textDecoration: 'none', fontWeight: 600 }}
         >
-          ← 返回文章列表
+          {l.back}
         </Link>
       </div>
     )
   }
+
+  // Related articles
+  const relatedSlugs = relatedMap[slug] || []
+  const allArticles = getArticles()
+  const relatedArticles = relatedSlugs
+    .map(s => allArticles.find(a => a.slug === s))
+    .filter(Boolean)
 
   return (
     <div>
@@ -70,19 +117,11 @@ export default async function ArticlePage({
           'url': 'https://japan-living-tools.vercel.app',
         },
       }} />
-      <Link
-        href="/articles"
-        style={{
-          display: 'inline-block',
-          color: '#1a73e8',
-          textDecoration: 'none',
-          fontWeight: 600,
-          fontSize: '0.9em',
-          marginBottom: 20,
-        }}
-      >
-        ← 返回文章列表
-      </Link>
+
+      <Breadcrumbs items={[
+        { label: l.breadcrumbArticles, href: '/articles' },
+        { label: article.title },
+      ]} />
 
       <div style={{ marginBottom: 8 }}>
         <span className="tag" style={{ marginRight: 12 }}>{article.tag}</span>
@@ -90,7 +129,7 @@ export default async function ArticlePage({
       </div>
 
       <h1 style={{
-        fontSize: '2em',
+        fontSize: 'clamp(1.5em, 4vw, 2em)',
         fontWeight: 700,
         color: '#0d47a1',
         lineHeight: 1.3,
@@ -104,6 +143,57 @@ export default async function ArticlePage({
         dangerouslySetInnerHTML={{ __html: article.content }}
       />
 
+      {/* ── Related Articles ── */}
+      {relatedArticles.length > 0 && (
+        <div style={{
+          marginTop: 48,
+          paddingTop: 28,
+          borderTop: '2px solid #e8f0fe',
+        }}>
+          <h3 style={{
+            fontSize: '1.15em',
+            fontWeight: 700,
+            color: '#0d47a1',
+            marginBottom: 16,
+          }}>
+            {l.related}
+          </h3>
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: 16,
+          }}>
+            {relatedArticles.map(ra => ra && (
+              <Link
+                key={ra.slug}
+                href={`/articles/${ra.slug}`}
+                style={{
+                  display: 'block',
+                  padding: '18px 20px',
+                  background: '#f8fafd',
+                  border: '1px solid #e8f0fe',
+                  borderRadius: 12,
+                  textDecoration: 'none',
+                  transition: 'border-color 0.2s, box-shadow 0.2s',
+                }}
+              >
+                <span className="tag" style={{ marginBottom: 8, display: 'inline-block' }}>
+                  {ra.tag}
+                </span>
+                <div style={{
+                  fontSize: '0.95em',
+                  fontWeight: 600,
+                  color: '#1a1a2e',
+                  lineHeight: 1.4,
+                }}>
+                  {ra.title}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div style={{
         marginTop: 40,
         paddingTop: 20,
@@ -114,7 +204,7 @@ export default async function ArticlePage({
           href="/articles"
           style={{ color: '#1a73e8', textDecoration: 'none', fontWeight: 600 }}
         >
-          ← 返回文章列表
+          {l.back}
         </Link>
       </div>
     </div>

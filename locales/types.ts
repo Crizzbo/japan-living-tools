@@ -22,7 +22,7 @@ export interface LocaleDict {
     articles: { title: string; desc: string; readMore: string; items: Record<string, { title: string; desc: string; date: string; tag: string }> }
   }
   // Articles
-  articles: { title: string; desc: string; back: string }
+  articles: { title: string; desc: string; back: string; relatedTitle: string; notFoundTitle: string }
   // Common
   common: {
     langSwitch: string
@@ -32,6 +32,9 @@ export interface LocaleDict {
     notFound: { title: string; desc: string; back: string }
     toolsTitle: string
     toolsDesc: string
+    breadcrumbHome: string
+    breadcrumbArticles: string
+    breadcrumbTools: string
   }
   // Tool pages
   tools: Record<string, { title: string; desc: string }>

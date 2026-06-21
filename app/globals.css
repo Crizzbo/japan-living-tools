@@ -446,6 +446,16 @@ body {
   color: #7b1fa2;
 }
 
+.tag-red {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.tag-blue {
+  background: #e8f0fe;
+  color: #1967d2;
+}
+
 /* ── Article Grid (Responsive) ── */
 .article-grid {
   display: grid;

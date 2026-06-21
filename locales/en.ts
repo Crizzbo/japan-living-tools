@@ -123,11 +123,16 @@ const en: LocaleDict = {
     },
     toolsTitle: 'All Tools',
     toolsDesc: 'Online calculators for life in Japan.',
+    breadcrumbHome: 'Home',
+    breadcrumbArticles: 'Articles',
+    breadcrumbTools: 'Tools',
   },
   articles: {
     title: '📝 Articles',
     desc: 'Practical guides and latest information for life in Japan.',
     back: '← Back to Articles',
+    relatedTitle: 'Related Articles',
+    notFoundTitle: 'Article Not Found',
   },
   tools: {
     houseCalculator: { title: 'Home Purchase Cost Calculator', desc: 'Detailed breakdown of all costs when buying a home in Japan.' },

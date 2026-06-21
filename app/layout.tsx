@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   description: '日本购房费用计算器、高度人才积分、税后工资计算、买房vs租房对比。在日生活实用在线工具。',
   keywords: ['日本购房', '日本买房', '购房计算器', '高度人才', '税后工资', '买房租房对比', '住民税', '故乡税', '生活费用'],
   authors: [{ name: 'Japan Living Tools' }],
+  icons: {
+    icon: '/favicon.svg',
+  },
   verification: {
     google: 'googlec2a7130db270ea35',
   },

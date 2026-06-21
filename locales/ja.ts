@@ -123,11 +123,16 @@ const ja: LocaleDict = {
     },
     toolsTitle: '全ツール',
     toolsDesc: '日本生活のためのオンライン計算ツール。',
+    breadcrumbHome: 'ホーム',
+    breadcrumbArticles: '記事一覧',
+    breadcrumbTools: 'ツール一覧',
   },
   articles: {
     title: '📝 お役立ち記事',
     desc: '日本生活に役立つ実用ガイドと最新情報。',
     back: '← 記事一覧に戻る',
+    relatedTitle: '関連記事',
+    notFoundTitle: '記事が見つかりません',
   },
   tools: {
     houseCalculator: { title: '住宅購入費用計算', desc: '日本での住宅購入にかかる全費用を明細計算——仲介手数料・税金・ローン金利。' },
