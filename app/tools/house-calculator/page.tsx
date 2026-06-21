@@ -2,6 +2,13 @@ import type { Metadata } from 'next'
 import LoanCalculator from '@/app/components/LoanCalculator'
 import JsonLd from '@/app/components/JsonLd'
 import Breadcrumbs from '@/app/components/Breadcrumbs'
+import type { Lang } from '@/locales/types'
+
+const locale = {
+  ja: { breadcrumbTools: 'ツール一覧', toolTitle: '住宅購入費用計算' },
+  zh: { breadcrumbTools: '工具列表', toolTitle: '购房费用计算器' },
+  en: { breadcrumbTools: 'Tools', toolTitle: 'Home Purchase Cost Calculator' },
+}
 
 export const metadata: Metadata = {
   title: '日本购房费用计算器',
@@ -13,7 +20,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function HouseCalculatorPage() {
+export default async function HouseCalculatorPage() {
+  const { cookies } = await import('next/headers')
+  const cookieStore = await cookies()
+  const langCookie = cookieStore.get('lang')?.value
+  const lang: Lang = (langCookie && ['ja', 'zh', 'en'].includes(langCookie)) ? langCookie as Lang : 'ja'
+  const l = locale[lang]
+
   return (
     <>
       <JsonLd data={{
@@ -26,7 +39,7 @@ export default function HouseCalculatorPage() {
         'offers': { '@type': 'Offer', 'price': '0', 'priceCurrency': 'JPY' },
         'browserRequirements': 'Requires JavaScript',
       }} />
-      <Breadcrumbs items={[{ label: 'ツール', href: '/tools' }, { label: '日本购房费用計算器' }]} />
+      <Breadcrumbs items={[{ label: l.breadcrumbTools, href: '/tools' }, { label: l.toolTitle }]} />
       <LoanCalculator />
     </>
   )
